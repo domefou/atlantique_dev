@@ -1,0 +1,201 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+@media (min-width: 789px) {
+    .realisation-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        background-color: $maquette-card;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid rgb(70, 70, 70);
+
+        .content__Header {
+            position: relative;
+
+            .bubble-card {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: rgba(10, 14, 23, 0.8);
+                width: fit-content;
+                padding: 5px 15px;
+                margin: 0;
+                border-radius: 25px;
+            }
+
+            .bg_img {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(19, 19, 19);
+                height: 215px;
+                overflow: hidden;
+                box-sizing: border-box;
+
+                z-index: 1;
+
+                img {
+                    height: 100%;
+                    max-width: 100%;
+
+                }
+            }
+
+            .text-secondary {
+                @include font-text($size: 12px);
+                color: $color-accent;
+            }
+        }
+
+        .content__Main {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px 20px;
+
+            .title__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    @include font-title($size: 16px);
+                    color: $color-title-tertiary;
+                }
+            }
+
+
+            .text-primary {
+                @include font-text($size: 13px);
+                color: $color-text-secondary;
+                margin: 0;
+            }
+
+            .text-secondary {
+                @include font-text($size: 10px);
+                color: $color-accent;
+            }
+
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 0;
+                margin: 20px 0 0 0;
+
+                li {
+                    display: inline-block;
+                    background-color: $maquette-card-secondary;
+                    width: fit-content;
+                    padding: 5px 10px;
+                    margin: 4px 0 0;
+                    @include font-text($size: 11px);
+                    color: $color-text-tertiary;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 789px) {
+    .realisation-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        background-color: $maquette-card;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid rgb(70, 70, 70);
+
+        .content__Header {
+            position: relative;
+
+            .bubble-card {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: rgba(10, 14, 23, 0.8);
+                width: fit-content;
+                padding: 5px 15px;
+                margin: 0;
+                border-radius: 25px;
+            }
+
+            .bg_img {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(19, 19, 19);
+                height: 190px;
+                overflow: hidden;
+                box-sizing: border-box;
+
+                z-index: 1;
+
+                img {
+                    height: 100%;
+                    max-width: 100%;
+
+                }
+            }
+
+            .text-secondary {
+                @include font-text($size: 12px);
+                color: $color-accent;
+            }
+        }
+
+        .content__Main {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px 20px;
+
+            .title__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    @include font-title($size: 16px);
+                    color: $color-title-tertiary;
+                }
+            }
+
+
+            .text-primary {
+                @include font-text($size: 13px);
+                color: $color-text-secondary;
+                margin: 0;
+            }
+
+            .text-secondary {
+                @include font-text($size: 10px);
+                color: $color-accent;
+            }
+
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 0;
+                margin: 20px 0 0 0;
+
+                li {
+                    display: inline-block;
+                    background-color: $maquette-card-secondary;
+                    width: fit-content;
+                    padding: 5px 10px;
+                    margin: 4px 0 0;
+                    @include font-text($size: 11px);
+                    color: $color-text-tertiary;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}

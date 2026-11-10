@@ -1,0 +1,217 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+
+.bubble-section__head {
+    width: fit-content;
+    margin-bottom: 15px;
+    border: 1px solid $color-accent-secondary;
+    background-color: $bubble-info;
+    border-radius: 35px;
+    @include font-text($size: 9px);
+
+    .text-accent__secondary {
+        display: inline-block;
+        width: fit-content;
+        margin: 0;
+        padding: 3px 10px;
+        color: $color-accent-secondary;
+        text-transform: uppercase;
+    }
+}
+
+@media(min-width:789px) {
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background-section;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+        width: 100%;
+
+
+        .faq__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-top: 30px;
+            gap: 30px;
+
+            .content_title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 80%;
+                margin-bottom: 45px;
+                gap: 10px;
+
+                h1 {
+                    margin: 0 0 45px 0;
+                    @include font-title($size: 40px, $weight: 600);
+                    color: $color-title-secondary;
+                }
+
+                .orange {
+                    color: $color-accent;
+                }
+
+                p {
+                    display: inline-block;
+                    max-width: 100%;
+                    @include font-text($size: 15px);
+                    color: $color-text-primary;
+                    line-height: 25px;
+
+                    padding-left: 15px;
+                    margin-left: 15px;
+                    border-left: 3px solid $color-accent;
+                }
+
+
+
+            }
+        }
+
+        .text-info {
+            display: flex;
+            justify-self: center;
+            width: 60%;
+            margin: 65px 0;
+
+            p {
+                display: inline-block;
+                max-width: 100%;
+                @include font-text($size: 15px);
+                color: $color-text-primary;
+                line-height: 18px;
+            }
+
+            a {
+                display: inline-block;
+                max-width: 100%;
+                @include font-text($size: 15px);
+                color: $color-accent-secondary;
+                line-height: 18px;
+
+                &:hover {
+                    color: rgb(109, 194, 244);
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 20px 0;
+            justify-content: center;
+            align-content: center;
+            //@include background($bg_section)
+        }
+    }
+}
+
+@media(max-width:789px) {
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background-section;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+        width: 100%;
+
+
+        .faq__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 30px;
+            padding-left: 15px;
+            gap: 30px;
+
+            .content_title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 80%;
+                margin-bottom: 15px;
+                gap: 10px;
+
+                h1 {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                    @include font-title($size: 25px, $weight: 600);
+                    color: $color-title-secondary;
+                }
+
+                .orange {
+                    display: flex;
+                    color: $color-accent;
+                }
+
+                p {
+                    display: inline-block;
+                    max-width: 100%;
+                    padding-left: 7px;
+                    margin-left: 15px;
+                    border-left: 3px solid $color-accent;
+                    @include font-text($size: 13px);
+                    color: $color-text-primary;
+                    line-height: 18px;
+                }
+
+
+
+            }
+        }
+
+        .text-info {
+            display: flex;
+            justify-self: center;
+            width: 90%;
+            margin: 65px 0;
+
+            p {
+                display: inline-block;
+                max-width: 100%;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+                line-height: 18px;
+            }
+
+            a {
+                display: inline-block;
+                max-width: 100%;
+                @include font-text($size: 13px);
+                color: $color-accent-secondary;
+                line-height: 18px;
+
+                &:hover {
+                    color: rgb(109, 194, 244);
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 20px 0;
+            justify-content: center;
+            align-content: center;
+            //@include background($bg_section)
+        }
+    }
+}

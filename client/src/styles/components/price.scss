@@ -1,0 +1,165 @@
+//@use "../mixin/mixin.scss" as *;
+@use "../mixin/bis_mixin.scss" as *;
+
+
+
+
+@media (min-width: 789px) {
+    .container__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-width: 250px;
+        min-height: 280px;
+        padding: 15px;
+        margin-bottom: 25px;
+        border: 1px solid $color-text-exeption;
+        border-radius: 10px;
+        background-color: $background-section;
+
+
+        .content__Header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            min-height: 110px;
+
+            .price-title {
+                display: block;
+                width: 100%;
+                margin: 0;
+                @include font-text($size: 18px, $weight: 600);
+                font-style: oblique;
+                text-align: center;
+                color: $color-title-tertiary;
+            }
+
+            .price-description {
+                display: block;
+                width: 100%;
+                @include font-text($size: 15px);
+                color: $color-accent;
+            }
+        }
+
+        .content__Main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+
+            ul {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style-type: square;
+                    text-align: left;
+                    margin: 15px 0;
+                    padding: 0;
+                    @include font-text($size: 13px);
+                    color: $color-text-primary;
+
+                }
+            }
+
+            p {
+                text-align: left;
+                margin: 15px 0 0 0;
+                padding: 0;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 789px) {
+
+
+
+    .container__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 215px;
+        height: auto;
+        min-height: 250px;
+        padding: 15px 10px;
+        border: 1px solid $color-text-exeption;
+        border-radius: 10px;
+        background-color: $background-section;
+
+        .content__Header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .price-title {
+                text-shadow: 3px 6px 15px rgb(0, 0, 0);
+                margin: 10px 0;
+                @include font-text($size: 16px);
+                color: $color-title-tertiary;
+
+            }
+
+            .price-description {
+                text-align: center;
+                @include font-text($size: 13px);
+                color: $color-accent;
+            }
+        }
+
+        .content__Header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content__Main {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            width: 100%;
+            margin: 0;
+
+            ul {
+                width: 100%;
+                min-height: 140px;
+                text-align: center;
+                margin: 0 15px;
+                padding: 0;
+
+                li {
+                    width: 95%;
+                    margin: 10px 0;
+                    list-style-type: square;
+                    text-align: left;
+                    @include font-text($size: 13px);
+                    color: $color-text-primary;
+
+                }
+            }
+
+            p {
+                text-align: center;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+        }
+
+    }
+}

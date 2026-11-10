@@ -1,0 +1,2670 @@
+//@use "../mixin/mixin.scss" as *;
+@use "../mixin/bis_mixin.scss" as *;
+
+@media (min-width:789px) {
+
+    .accueil {
+        height: auto;
+        width: 100%;
+        overflow-y: auto;
+        scrollbar-width: none;
+        background-color: $background-section-secondary;
+
+        .bubble-hero {
+            width: fit-content;
+            margin-left: 50px;
+            border: 1px solid $bubble-hero;
+            border-radius: 35px;
+            @include font-text($size: 12px);
+
+            .text-accent__secondary {
+                display: inline-block;
+                width: fit-content;
+                margin: 0;
+                padding: 5px 15px;
+                color: $bubble-hero;
+            }
+        }
+
+
+        .bubble-section__head {
+            width: fit-content;
+            height: fit-content;
+            margin: 0 50px 25px 0;
+            border: 1px solid $color-accent-secondary;
+            background-color: $bubble-info;
+            border-radius: 35px;
+            @include font-text($size: 9px);
+
+            .text-accent__secondary {
+                display: inline-block;
+                width: fit-content;
+                margin: 0;
+                padding: 5px 15px;
+                color: $color-accent-secondary;
+                text-transform: uppercase;
+            }
+        }
+
+
+
+
+        /// SECTION HERO /////
+
+        .Hero-container {
+            /*background:
+                radial-gradient(circle at center, #041369 0%, transparent 40%),
+                #000;
+*/
+            background-image: url(/assets/img/new_img/background-hero.svg);
+
+            padding-top: 75px;
+            padding-bottom: 35px;
+            width: 100%;
+            min-height: fit-content;
+
+
+
+
+            .title-hero {
+
+                max-width: 100%;
+                min-height: 50vh;
+                display: flex;
+                align-items: flex-end;
+
+                h1 {
+                    display: inline-block;
+                    max-width: 50%;
+                    margin: 50px 0 50px 120px;
+                    color: $color-title;
+                    @include font-title-hero();
+
+
+                }
+
+                .orange-title {
+                    color: $color-accent;
+                    @include font-title-hero_secondary();
+                }
+            }
+
+            .CTA-hero {
+                width: 100%;
+                @include font-text($size: 15px);
+
+                .CTA-hero__container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    max-width: 40%;
+                    min-width: 35%;
+                    margin: 70px 0 20px 140px;
+
+                    .btn-primary {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        min-height: 30px;
+                        min-width: 28%;
+                        width: fit-content;
+                        padding: 10px 20px;
+                        margin: 8px 0;
+                        border: 1px solid $color-accent;
+                        background-color: $orange-card-secondary;
+                        color: $color-accent;
+                        text-decoration: none;
+                        box-sizing: border-box;
+
+                        img {
+                            height: 15px;
+                            filter: saturate(2.3);
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            border: 1px solid $color-accent-secondary;
+                            color: $color-title;
+
+                            img {
+
+                                filter: saturate(1) invert(1);
+                            }
+                        }
+                    }
+
+                    .btn-secondary {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 30px;
+                        min-width: 28%;
+                        width: fit-content;
+                        margin: 8px 0;
+                        padding: 10px 20px;
+                        background-color: $color-accent;
+                        border: 1px solid $color-accent;
+                        color: black;
+                        text-decoration: none;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            cursor: pointer;
+                            border: 1px solid $color-accent_hover;
+                            background-color: $color-accent_hover;
+                        }
+                    }
+                }
+            }
+
+            .card-hero__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 8px;
+                align-items: flex-end;
+                max-width: 80%;
+                min-width: 70%;
+                margin-left: 40px;
+
+
+                .card-hero {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 22%;
+                    min-height: 75px;
+                    height: fit-content;
+                    padding: 10px;
+                    background-color: $background-hero-list;
+
+                    .card-hero_text {
+                        max-width: 60%;
+                        margin: 0;
+                        @include font-text($size: 13px);
+                        color: $color-text-primary;
+                    }
+
+                    .card-hero_accent {
+                        max-width: 60%;
+                        margin: 0;
+                        @include font-text($size: 20px, $style: bold);
+                        color: $color-accent-secondary;
+                    }
+                }
+            }
+        }
+
+
+        //// SECTION PROJET ////
+
+        .votre-projet {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 60px 50px;
+            background-color: $background-section-secondary;
+            overflow: hidden;
+
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+
+                .votre-projet__head {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-bottom: 50px;
+
+                    .votre-projet__en-tete {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .article-title__container {
+                            display: flex;
+                            flex-direction: column;
+                            max-width: 58%;
+
+                            h2 {
+                                @include font-title();
+                                color: $color-title-secondary;
+                                margin: 10px 0;
+                            }
+
+
+                        }
+
+                        .marque {
+                            text-align: right;
+
+                            .marque-primary {
+                                @include font-marque($size: 16px, $weight: 200);
+                                color: $color-title-secondary;
+                            }
+
+                            .marque-secondary {
+                                @include font-marque($size: 32px, $weight: 200);
+                                color: $color-title-secondary;
+                            }
+
+                            .marque-tertiary {
+                                @include font-marque($size: 24px, $weight: 300);
+                                color: $color-accent-tertiary;
+
+                            }
+                        }
+
+                    }
+
+
+
+                    .article-text__container {
+                        p {
+                            @include font-text ();
+                            margin: 10px 0;
+                            color: $color-text-primary;
+                        }
+                    }
+
+
+                }
+
+                .votre-projet__content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    max-width: 94%;
+                    min-width: 80%;
+
+
+                    .votre-projet__card {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 29%;
+                        min-width: 360px;
+                        min-height: 300px;
+                        padding-bottom: 25px;
+                        background-color: $orange-card;
+                        border-radius: 15px;
+                        border: 1px solid $orange-card-tertiary;
+                        box-sizing: border-box;
+
+
+                        h3 {
+                            border-radius: 15px 15px 0 0;
+                            padding: 20px 25px 0 25px;
+                            margin: 5px 0;
+                            @include font-title($size: 18px);
+                            color: $color-accent;
+                            background-color: $orange-card-secondary;
+                        }
+
+                        p {
+
+                            padding: 8px 25px;
+                            margin: 0;
+                            @include font-text($size: 15px);
+                            color: $color-text-secondary;
+                        }
+                    }
+
+                    .votre-projet__absolute {
+                        position: relative;
+                        max-width: 29%;
+                        min-width: 360px;
+                        min-height: 300px;
+                        border-radius: 15px;
+                        border: 1px solid rgb(66, 66, 66);
+                        box-sizing: border-box;
+                        background:
+                            radial-gradient(circle at center, #191123 0%, transparent 60%),
+                            #000;
+
+                        img {
+                            position: absolute;
+                            bottom: -25px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 70%;
+                            filter: drop-shadow(20px 20px 10px black) brightness(0.4);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        //// SECTION CHOIX MODULE ////
+
+        .structure-fonction {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+            padding: 60px 50px;
+            //background-color: $background-section-secondary;
+            background-image: url(/assets/img/new_img/background-section_bis.svg);
+            background-position: center;
+
+
+            .container-global {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+
+                .structure__head {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 40%;
+                    min-width: 430px;
+
+
+
+                    .structure-fonction__title {
+
+                        h2 {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 0;
+                            @include font-title($size: 40px);
+                            color: $color-title-secondary;
+                        }
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 15px);
+                            color: $color-text-primary;
+                        }
+                    }
+
+                    .structure-fonction__citation {
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 15px);
+                            color: $color-text-citation;
+                        }
+
+                        .citation {
+                            width: 100%;
+                            @include font-text($size: 40px);
+                            color: $color-text-citation;
+                        }
+
+
+                    }
+
+
+                }
+
+
+
+                .structure__foot {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 400px;
+                    margin: 0 auto;
+
+
+                    .structure-fonction__module {
+                        width: fit-content;
+                    }
+                }
+
+            }
+
+
+        }
+
+        //// SECTION MAQUETTE ////
+        .realisation {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 60px 50px;
+            background-color: $background-section-secondary;
+
+            .maquette-container {
+
+                .maquette__title {
+
+                    margin-bottom: 50px;
+
+                    h2 {
+                        @include font-title($size: 40px);
+                        color: $color-title-secondary;
+                        margin: 0;
+                    }
+                }
+
+                .maquette-card__container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 2%;
+                    padding: 25px 0;
+                }
+            }
+        }
+
+        //// SECTION REALISATION ////
+        .real-project-container {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 60px 0;
+            background-color: $background-section-secondary;
+
+            .real-project__title {
+                margin-bottom: 50px;
+
+                h2 {
+                    @include font-title($size: 40px);
+                    color: $color-title-secondary;
+                    margin: 0;
+                }
+            }
+
+            .real-project__working-process {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #3D3D3D;
+                max-width: 100%;
+                padding: 35px 55px;
+
+                .img__working {
+                    display: flex;
+                    align-items: center;
+                    width: 120px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .title__container {
+
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+
+
+                    h3 {
+                        @include font-title($size: 20px);
+                        color: $color-title-secondary;
+                        margin: 0;
+                    }
+
+                    .orange-items {
+                        @include font-title($size: 20px);
+                        color: $color-accent;
+                    }
+
+                    .text-primary {
+                        @include font-text($size: 15px);
+                        color: $color-text-secondary;
+                    }
+                }
+            }
+        }
+
+        //// SECTION TECHNOLOGIE ////
+        .technologie {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: $background-section-tertiary;
+            border-top: 1px solid #2E2E2E;
+
+            .technologie__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 95%;
+                min-height: 100px;
+
+
+                .tech__title {
+                    display: flex;
+                    min-width: 20%;
+                    width: auto;
+
+                    .text-secondary {
+                        @include font-text($weight: 600, $size: 12px);
+                        color: $color-text-secondary;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+
+                .items__container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 80%;
+                    min-width: 840px;
+
+                    .tech__block {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        height: 20px;
+                        min-width: fit-content;
+                        margin: 20px 30px;
+
+                        img {
+                            height: 100%;
+                            margin-right: 8px;
+                        }
+
+                        .text-secondary {
+                            @include font-text($weight: 600, $size: 13px);
+                            color: $color-text-secondary;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        //// SECTION CITATION TECHNOLOGIE ////
+        .technologie__citation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            width: 100%;
+            background-color: $background-section-secondary;
+
+            p {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                @include font-text($size: 15px);
+                color: $color-text-citation;
+            }
+
+            .citation {
+                width: 100%;
+                @include font-text($size: 40px);
+                color: $color-text-citation;
+            }
+        }
+
+        //// SECTION AGENCE OU FREELANCE ////
+        .freelance {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 60px 50px;
+            background-color: $background-section;
+            overflow: hidden;
+
+            .freelance__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+
+                .freelance-text__intro {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 45%;
+                    min-width: 380px;
+                    margin: 0 auto 25px;
+
+                    .freelance-title {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 25px;
+
+                        h2 {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 0 0 15px 0;
+                            @include font-title($size: 40px);
+                            color: $color-title-secondary;
+                        }
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 15px);
+                            color: $color-text-secondary;
+                        }
+                    }
+
+                    .freelance-footer {
+                        padding: 15px;
+                        background-color: $freelance-smooth-card;
+                        border-radius: 12px;
+
+                        .engagement__container {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            max-height: 24px;
+
+
+                            img {
+                                height: 24px;
+                                margin-right: 15px;
+                            }
+
+                            .egagement-title {
+                                display: inline-block;
+                                width: 100%;
+                                margin: 0;
+                                @include font-text($size: 15px, $weight: 600);
+                                color: $color-text-tertiary;
+                            }
+                        }
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            .freelance-card__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                max-width: 52%;
+                margin: 0 auto;
+
+                .agence-card {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 48%;
+                    min-width: 295px;
+                    max-height: 370px;
+                    border-radius: 16px;
+                    background-color: $freelance-dark-card;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    margin: 0 auto 25px;
+
+                    .agence-head {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-height: 50px;
+                        width: 100%;
+                        background-color: $freelance-dark-card-secondary;
+
+                        .agence-title {
+                            margin-left: 25px;
+                            @include font-title($size: 15px);
+                            color: $color-text-exeption;
+
+                        }
+
+                        img {
+                            height: 12px;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    ul {
+                        margin-left: 15px;
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                            max-width: 80%;
+                            padding-left: 25px;
+                            margin: 20px 0;
+
+                            background-image: url('/assets/icons/new_icon/interdit.webp');
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            background-position: left 0.3em;
+
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+                }
+
+                .atlantique-card {
+
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 48%;
+                    min-width: 295px;
+                    max-height: 370px;
+                    border-radius: 16px;
+                    background-color: $freelance-card;
+                    border: 1px solid $color-accent;
+                    box-sizing: border-box;
+                    margin: 0 auto 25px;
+
+                    .atlantique-bubble {
+                        position: absolute;
+                        background-color: $color-accent;
+                        height: 20px;
+                        right: 35px;
+                        top: -10px;
+                        border-radius: 15px;
+                        width: fit-content;
+
+                        p {
+                            @include font-text($size: 10px, $weight: 600);
+                            color: $color-text-exception;
+                            text-transform: uppercase;
+                            margin: 0 15px;
+                            line-height: 20px;
+                            text-align: center;
+                        }
+                    }
+
+                    .atlantique-head {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-height: 50px;
+                        width: 100%;
+                        border-radius: 16px 16px 0 0;
+                        background-color: $freelance-card-secondary;
+
+                        .atlantique-title {
+                            margin-left: 25px;
+                            @include font-title($size: 15px);
+                            color: $color-accent;
+
+                        }
+
+                        img {
+                            height: 12px;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    ul {
+                        margin-left: 15px;
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                            max-width: 80%;
+                            padding-left: 25px;
+                            margin: 20px 0;
+
+                            background-image: url('/assets/icons/new_icon/orange/simple_check.webp');
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            background-position: left 0.3em;
+
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        //// SECTION CITATION FREELANCE ////
+        .freelance__citation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            width: 100%;
+            background-color: $background-section-secondary;
+
+            p {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                @include font-text($size: 15px);
+                color: $color-text-citation;
+            }
+
+            .citation {
+                width: 100%;
+                @include font-text($size: 40px);
+                color: $color-text-citation;
+            }
+        }
+
+        //// SECTION PRESENTATION ////
+        .presentation {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            max-width: 100%;
+            padding: 60px 50px;
+            background-color: $background-section;
+            overflow: hidden;
+
+            .presentation__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                max-width: 100%;
+                margin-top: 25px;
+
+                .presentation__img {
+                    position: relative;
+                    max-width: 40%;
+                    min-width: 430px;
+                    margin: 0 auto;
+
+                    max-height: 482px;
+                    overflow: hidden;
+                    border-radius: 16px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                    }
+
+
+                    .img__absolute-text {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: rgba(10, 14, 23, 0.85);
+                        padding: 8px;
+                        border-radius: 12px;
+                        width: 94%;
+
+                        .localisation__head {
+                            display: flex;
+                            flex-direction: row;
+                            min-height: 25px;
+                            margin-bottom: 8px;
+
+                            img {
+                                max-width: 16px;
+                                margin-right: 10px;
+                            }
+
+                            p {
+                                display: inline-block;
+                                max-width: 80%;
+                                @include font-text($size: 15px);
+                                line-height: 25px;
+                                margin: 0;
+                                color: $color-title-tertiary;
+                            }
+                        }
+
+                        p {
+                            display: inline-block;
+                            max-width: 90%;
+                            margin: 0;
+                            @include font-text($size: 13px, $weight: 200);
+                            color: $color-text-secondary;
+                        }
+                    }
+                }
+
+                .presentation__text {
+                    max-width: 55%;
+                    margin: 0 auto;
+
+                    h2 {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-title();
+                        color: $color-title-secondary;
+                        margin: 10px 0;
+                    }
+
+                    .text-primary {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-text ($size: 15px);
+                        margin: 10px 0;
+                        color: $color-text-primary;
+                    }
+
+                    .text-secondary {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-text ($size: 15px, $weight: 600);
+                        color: $color-title-tertiary;
+                    }
+
+                    .text-uppercase {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-text ($size: 12px, $weight: 600);
+                        text-transform: uppercase;
+                        color: $color-text-exeption;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        max-width: 90%;
+                        padding: 0;
+                        margin: 35px 0 0 0;
+                        justify-content: flex-start;
+
+
+                        li {
+                            display: inline-block;
+                            margin: 5px 5px;
+                            padding: 3px 10px;
+                            border-radius: 15px;
+                            @include font-text($size: 13px);
+                            background-color: $maquette-card-secondary;
+                            color: $color-accent-tertiary;
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+        //// SECTION ETAPE DU PROJET ////
+
+        .etape-projet {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            padding: 60px 50px;
+            overflow: hidden;
+            background-color: $background-section-secondary;
+
+
+            .head {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 35px;
+
+                h2 {
+                    display: inline-block;
+                    @include font-title();
+                    color: $color-title-secondary;
+                    margin: 10px 0;
+                }
+
+                .text-primary {
+                    display: inline-block;
+                    @include font-text ($size: 15px);
+                    margin: 10px 0;
+                    color: $color-text-primary;
+                }
+            }
+
+            .etape__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+                background:
+                    radial-gradient(circle at center, #d775ef47 0%, $background-section-secondary 35%),
+                    #000;
+
+
+
+                .etape__card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    max-width: 370px;
+                    min-height: 310px;
+                    background-color: $project-card;
+                    border-radius: 16px;
+                    border: 1px solid $orange-card-tertiary;
+                    overflow: hidden;
+
+                    .etape__head {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding: 20px;
+                        background-color: $project-card-secondary;
+
+                        p {
+                            @include font-text($size: 13px, $weight: 600);
+                            color: $color-text-exeption;
+                            text-transform: uppercase;
+                            //margin-left: 15px;
+
+                        }
+
+                        .img__container {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 37px;
+                            height: 37px;
+                            //margin-right: 15px;
+                            border-radius: 12px;
+                            background-color: $maquette-card-secondary;
+
+                            img {
+                                width: 16px;
+                            }
+
+                        }
+                    }
+
+                    .etape__main {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        margin: 0 20px 10px;
+
+                        h3 {
+                            @include font-title($size: 20px, $weight: 400);
+                            color: $color-title-tertiary;
+                        }
+
+                        .main-text {
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                            margin: 0;
+                        }
+                    }
+
+                    .etape__foot {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin: 5px 20px;
+                        border-top: 1px solid $color-text-citation;
+
+                        img {
+                            height: 12px;
+                            margin-right: 15px;
+                        }
+
+                        .foot-text {
+                            @include font-text($size: 12px);
+                            color: $color-accent;
+                            line-height: 35px;
+                        }
+                    }
+                }
+
+                .foot {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 89%;
+                    background-color: $project-card;
+                    border-radius: 16px;
+                    margin-top: 45px;
+
+                    .img__container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 8px 0;
+
+                        .img__content {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 40px;
+                            height: 40px;
+                            margin-left: 15px;
+                            margin-right: 15px;
+                            border-radius: 50% 50%;
+                            background-color: rgba(76, 215, 246, 0.15);
+
+                            img {
+                                width: 20px;
+                            }
+                        }
+
+
+                        .img__text {
+
+                            .text-tertiary {
+                                @include font-text($size: 13px, $weight: 600);
+                                color: $color-title-tertiary;
+                            }
+
+                            .text-secondary {
+                                @include font-text($size: 12px);
+                                color: $color-text-secondary;
+                            }
+                        }
+                    }
+
+                    .cta__container {
+
+                        margin-right: 15px;
+
+                        .cta__contact {
+                            @include font-text($size: 13px, $weight: 600);
+                            color: $color-text-secondary;
+                            background-color: #262A34;
+                            text-decoration: none;
+                            padding: 10px 25px;
+                            border-radius: 8px;
+
+                            &:hover {
+                                background-color: #2f3440;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        //// SECTION SAVOIR FAIRE ////
+        .savoir-faire {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 0;
+            background-color: $background-section;
+
+            h2 {
+                display: inline-block;
+                max-width: 70%;
+                text-align: center;
+                margin-top: 0;
+                @include font-title();
+                color: $color-title-secondary;
+
+            }
+
+            .orange-text {
+                color: $color-accent;
+            }
+
+            .secondary-text {
+                display: inline-block;
+                max-width: 50%;
+                text-align: center;
+                @include font-text($size: 18px);
+                color: $color-text-secondary
+            }
+
+            .cta__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                width: 50%;
+                margin-top: 35px;
+
+
+                .cta-contact {
+                    @include font-text($size: 18px);
+                    width: fit-content;
+                    padding: 10px 20px;
+                    margin: 0 auto;
+                    background-color: $color-accent;
+                    border: 1px solid $color-accent;
+                    color: black;
+                    text-decoration: none;
+                    box-sizing: border-box;
+
+
+                    img {
+                        width: 20px;
+                        margin-right: 15px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $color-accent_hover;
+                    }
+
+                }
+
+                .cta-simulateur {
+
+                    @include font-text($size: 18px);
+                    width: fit-content;
+                    padding: 10px 20px;
+                    margin: 0 auto;
+                    border: 1px solid $color-accent;
+                    background-color: $orange-card-secondary;
+                    color: $color-accent;
+                    text-decoration: none;
+                    box-sizing: border-box;
+
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid $color-accent_hover;
+                        color: $color-accent_hover;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                max-width: 50%;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    max-width: 80%;
+                    padding-left: 20px;
+                    margin: 20px 15px;
+
+                    background-image: url('/assets/icons/new_icon/blue/double-check.webp');
+                    background-repeat: no-repeat;
+                    background-size: 12px 12px;
+                    background-position: left 0.3em;
+
+                    @include font-text($size: 13px);
+                    color: $color-text-secondary;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+@media (max-width:789px) {
+
+    .accueil {
+        height: auto;
+        width: 100%;
+        overflow-y: auto;
+        scrollbar-width: none;
+        background-color: $background-section-secondary;
+
+
+        .bubble-section__head {
+            width: fit-content;
+            margin-bottom: 15px;
+            border: 1px solid $color-accent-secondary;
+            //background-color: $bubble-info;
+            border-radius: 35px;
+            @include font-text($size: 9px);
+
+            .text-accent__secondary {
+                display: inline-block;
+                width: fit-content;
+                margin: 0;
+                padding: 3px 10px;
+                color: $color-accent-secondary;
+                text-transform: uppercase;
+            }
+        }
+
+
+
+
+        /// SECTION HERO /////
+
+        .Hero-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /*background:
+                radial-gradient(circle at center, #041369 0%, transparent 40%),
+                #000;*/
+            background-image: url(/assets/img/new_img/background-hero.svg);
+            background-size: cover;
+            background-position: center;
+            padding-top: 75px;
+            padding-bottom: 15px;
+            width: 100%;
+            min-height: 74vh;
+
+
+            .title-hero {
+
+                max-width: 100%;
+                min-height: 25vh;
+                display: flex;
+                align-items: flex-end;
+
+                h1 {
+                    display: inline-block;
+                    max-width: 80%;
+                    margin: 30px 0 20px 30px;
+                    color: $color-title;
+                    @include font-title-hero($size: 25px);
+
+
+                }
+
+                .orange-title {
+                    color: $color-accent;
+                    @include font-title-hero_secondary($size: 32px);
+                }
+            }
+
+            .CTA-hero {
+                width: 100%;
+                @include font-text($size: 15px);
+
+                .CTA-hero__container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    max-width: 80%;
+                    min-width: 40%;
+                    margin: 35px auto;
+
+                    .btn-primary {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        min-height: 30px;
+                        min-width: 28%;
+                        width: fit-content;
+                        padding: 10px 20px;
+                        margin: 8px 0;
+                        border: 1px solid $color-accent;
+                        background-color: $orange-card-secondary;
+                        color: $color-accent;
+                        text-decoration: none;
+                        box-sizing: border-box;
+
+                        img {
+                            height: 15px;
+                            filter: saturate(2.3);
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            border: 1px solid $color-accent-secondary;
+                            color: $color-title;
+
+                            img {
+
+                                filter: saturate(1) invert(1);
+                            }
+                        }
+                    }
+
+                    .btn-secondary {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 30px;
+                        min-width: 28%;
+                        width: fit-content;
+                        margin: 8px 0;
+                        padding: 10px 20px;
+                        background-color: $color-accent;
+                        border: 1px solid $color-accent;
+                        color: black;
+                        text-decoration: none;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            cursor: pointer;
+                            border: 1px solid $color-accent_hover;
+                            background-color: $color-accent_hover;
+                        }
+                    }
+                }
+            }
+
+            .card-hero__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: stretch;
+                max-width: 100%;
+                min-width: 70%;
+
+
+                .card-hero {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    max-width: 24%;
+                    min-width: 24%;
+                    background-color: $background-hero-list;
+
+                    .card-hero_text {
+                        max-width: 100%;
+                        margin: 0;
+                        padding: 10px 10px 4px 10px;
+                        @include font-text($size: 10px);
+                        color: $color-text-primary;
+                    }
+
+                    .card-hero_accent {
+                        max-width: 60%;
+                        margin: 0;
+                        padding: 0 10px 10px 10px;
+                        @include font-text($size: 13px, $style: bold);
+                        color: $color-accent-secondary;
+                    }
+                }
+            }
+        }
+
+
+        //// SECTION PROJET ////
+
+        .votre-projet {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 30px 20px 70px 20px;
+            background-color: $background-section-secondary;
+
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+
+                .votre-projet__head {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    margin-bottom: 30px;
+
+                    .votre-projet__en-tete {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+
+
+                        .article-title__container {
+                            display: flex;
+                            flex-direction: column;
+                            max-width: 70%;
+                            margin-bottom: 25px;
+
+                            h2 {
+                                @include font-title($size: 25px);
+                                color: $color-title-secondary;
+                                margin: 10px 0;
+                            }
+
+
+                        }
+
+                        .marque {
+                            max-width: 30%;
+                            text-align: right;
+
+                            .marque-primary {
+                                margin: 0;
+                                @include font-marque($size: 10px, $weight: 200);
+                                color: $color-title-secondary;
+                            }
+
+                            .marque-secondary {
+                                @include font-marque($size: 20px, $weight: 200);
+                                color: $color-title-secondary;
+                            }
+
+                            .marque-tertiary {
+                                @include font-marque($size: 16px, $weight: 300);
+                                color: $color-accent-tertiary;
+
+                            }
+                        }
+                    }
+
+
+
+                    .article-text__container {
+                        width: 100%;
+
+                        p {
+                            @include font-text ($size: 13px);
+                            margin: 10px 0 15px 0;
+                            color: $color-text-primary;
+                        }
+                    }
+                }
+
+                .votre-projet__content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 25px;
+                    max-width: 100%;
+                    min-width: 80%;
+
+
+                    .votre-projet__card {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 100%;
+                        min-width: 250px;
+                        min-height: 200px;
+                        padding-bottom: 15px;
+                        background-color: $orange-card;
+                        border-radius: 15px;
+                        border: 1px solid $orange-card-tertiary;
+                        box-sizing: border-box;
+
+
+                        h3 {
+                            display: inline-block;
+                            max-width: 100%;
+                            border-radius: 15px 15px 0 0;
+                            padding: 20px 35px 15px 10px;
+                            margin: 0;
+                            @include font-title($size: 14px);
+                            color: $color-accent;
+                            background-color: $orange-card-secondary;
+                        }
+
+                        p {
+
+                            padding: 8px 10px;
+                            margin: 0;
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+
+                    .votre-projet__absolute {
+                        /*position: relative;
+                        width: 100%;
+                        min-width: 300px;
+                        min-height: 100px;
+                        border-radius: 15px;
+                        border: 1px solid rgb(66, 66, 66);
+                        background:
+                            radial-gradient(circle at center, #68442ea3 0%, #68442e1d 60%),
+                            #000;
+
+                        img {
+                            position: absolute;
+                            bottom: -25px;
+                            left: 70%;
+                            transform: translateX(-50%);
+                            width: 50%;
+                            filter: drop-shadow(20px 20px 10px rgb(0, 0, 0));
+                        }
+                            */
+                        position: relative;
+                        width: 100%;
+                        min-width: 300px;
+                        min-height: 1px;
+
+                        img {
+                            position: absolute;
+                            bottom: -50px;
+                            left: 70%;
+                            transform: translateX(-50%);
+                            max-width: 250px;
+                            width: 50%;
+                            filter: drop-shadow(20px 20px 10px rgb(0, 0, 0));
+                        }
+                    }
+                }
+
+            }
+        }
+
+        //// SECTION CHOIX MODULE ////
+
+        .structure-fonction {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 50px 20px 10px;
+            background-image: url(/assets/img/new_img/background-section_bis.svg);
+            background-size: cover;
+            background-position: center;
+
+            .container-global {
+                display: flex;
+                flex-direction: column;
+
+                .structure__head {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+
+
+
+                    .structure-fonction__title {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 100%;
+
+
+                        h2 {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 0;
+                            @include font-title($size: 25px);
+                            color: $color-title-secondary;
+                        }
+
+                        p {
+                            display: inline-block;
+                            max-width: 100%;
+                            @include font-text($size: 15px);
+                            color: $color-text-primary;
+                        }
+                    }
+
+                    .structure-fonction__citation {
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 11px);
+                            color: $color-text-citation;
+                        }
+
+                        .citation {
+                            width: 100%;
+                            @include font-text($size: 30px);
+                            color: $color-text-citation;
+                        }
+
+
+                    }
+
+                }
+            }
+
+            .structure__foot {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                margin-top: 10px;
+
+                .structure-fonction__module {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        //// SECTION MAQUETTE ////
+        .realisation {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            background-color: $background-section-secondary;
+
+            .maquette-container {
+
+
+                .maquette__title {
+
+                    padding: 50px 20px 10px;
+
+                    margin-bottom: 10px;
+
+                    h2 {
+                        @include font-title($size: 25px);
+                        color: $color-title-secondary;
+                        margin: 0;
+                    }
+                }
+
+                .maquette-card__container {
+                    display: flex;
+                    justify-self: center;
+                    flex-wrap: nowrap;
+                    gap: 15px;
+                    max-width: 95%;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    scrollbar-width: none;
+                    /* Firefox */
+                    -ms-overflow-style: none;
+                    /* IE/ancien Edge */
+                }
+
+                .maquette-card__container>* {
+                    flex-shrink: 0;
+                }
+
+                .maquette-card__container::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                    display: none;
+                    /* Chrome, Safari, Edge */
+                }
+            }
+        }
+
+        //// SECTION REALISATION ////
+        .real-project-container {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 50px 20px 10px;
+            background-color: $background-section-secondary;
+
+            .real-project__title {
+                margin-bottom: 50px;
+
+                h2 {
+                    @include font-title($size: 25px);
+                    color: $color-title-secondary;
+                    margin: 0;
+                }
+            }
+
+            .real-project__working-process {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #3D3D3D;
+                max-width: 100%;
+                padding: 25px 15px;
+
+                .img__working {
+                    display: flex;
+                    align-items: center;
+                    width: 60px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .title__container {
+
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+
+
+                    h3 {
+                        @include font-title($size: 16px);
+                        color: $color-title-secondary;
+                        margin: 0;
+                    }
+
+                    .orange-items {
+                        @include font-title($size: 16px);
+                        color: $color-accent;
+                    }
+
+                    .text-primary {
+                        @include font-text($size: 13px);
+                        color: $color-text-secondary;
+                    }
+                }
+            }
+        }
+
+        //// SECTION TECHNOLOGIE ////
+        .technologie {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: $background-section-tertiary;
+            border-top: 1px solid #2E2E2E;
+
+
+            .technologie__container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                min-height: 100px;
+
+
+                .tech__title {
+                    display: flex;
+                    min-width: 20%;
+                    width: auto;
+
+                    .text-secondary {
+                        @include font-text($weight: 600, $size: 11px);
+                        color: $color-text-secondary;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+
+                .items__container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+
+                    .tech__block {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        height: 13px;
+                        min-width: fit-content;
+                        margin: 8px;
+
+                        img {
+                            height: 90%;
+                            margin-right: 4px;
+                        }
+
+                        .text-secondary {
+                            @include font-text($weight: 600, $size: 9px);
+                            color: $color-text-secondary;
+                            line-height: 9px;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        //// SECTION CITATION TECHNOLOGIE ////
+        .technologie__citation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            width: 100%;
+            background-color: $background-section-secondary;
+
+            p {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                @include font-text($size: 11px);
+                color: $color-text-citation;
+            }
+
+            .citation {
+                width: 100%;
+                @include font-text($size: 30px);
+                color: $color-text-citation;
+            }
+        }
+
+        //// SECTION AGENCE OU FREELANCE ////
+        .freelance {
+
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 50px 20px 10px;
+            background-color: $background-section;
+            overflow: hidden;
+
+            .freelance__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 100%;
+
+
+                .freelance-text__intro {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 100%;
+                    margin: 0 auto 35px;
+
+                    .freelance-title {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 35px;
+
+                        h2 {
+                            display: inline-block;
+                            max-width: 100%;
+                            margin: 0 0 25px 0;
+                            @include font-title($size: 25px);
+                            color: $color-title-secondary;
+                        }
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 15px);
+                            color: $color-text-secondary;
+                        }
+                    }
+
+                    .freelance-footer {
+                        padding: 15px;
+                        background-color: $freelance-smooth-card;
+                        border-radius: 12px;
+
+                        .engagement__container {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            max-height: 24px;
+
+
+                            img {
+                                height: 24px;
+                                margin-right: 15px;
+                            }
+
+                            .egagement-title {
+                                display: inline-block;
+                                width: 100%;
+                                margin: 0;
+                                @include font-text($size: 15px, $weight: 600);
+                                color: $color-text-tertiary;
+                            }
+                        }
+
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            .freelance-card__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                max-width: 100%;
+                margin: 0 auto;
+
+                .agence-card {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 47%;
+                    min-width: 280px;
+                    max-height: 370px;
+                    border-radius: 16px;
+                    background-color: $freelance-dark-card;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    margin: 0 auto 25px;
+
+                    .agence-head {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-height: 50px;
+                        width: 100%;
+                        background-color: $freelance-dark-card-secondary;
+
+                        .agence-title {
+                            margin-left: 25px;
+                            @include font-title($size: 15px);
+                            color: $color-text-exeption;
+
+                        }
+
+                        img {
+                            height: 12px;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    ul {
+                        margin-left: 15px;
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                            max-width: 80%;
+                            padding-left: 25px;
+                            margin: 20px 0;
+
+                            background-image: url('/assets/icons/new_icon/interdit.webp');
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            background-position: left 0.3em;
+
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+                }
+
+                .atlantique-card {
+
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 47%;
+                    min-width: 280px;
+                    max-height: 370px;
+                    border-radius: 16px;
+                    background-color: $freelance-card;
+                    border: 1px solid $color-accent;
+                    box-sizing: border-box;
+                    margin: 0 auto 25px;
+
+                    .atlantique-bubble {
+                        position: absolute;
+                        background-color: $color-accent;
+                        height: 20px;
+                        right: 35px;
+                        top: -10px;
+                        border-radius: 15px;
+                        width: fit-content;
+
+                        p {
+                            @include font-text($size: 10px, $weight: 600);
+                            color: $color-text-exception;
+                            text-transform: uppercase;
+                            margin: 0 15px;
+                            line-height: 20px;
+                            text-align: center;
+                        }
+                    }
+
+                    .atlantique-head {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-height: 50px;
+                        width: 100%;
+                        border-radius: 16px 16px 0 0;
+                        background-color: $freelance-card-secondary;
+
+                        .atlantique-title {
+                            margin-left: 25px;
+                            @include font-title($size: 15px);
+                            color: $color-accent;
+
+                        }
+
+                        img {
+                            height: 12px;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    ul {
+                        margin-left: 15px;
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                            max-width: 80%;
+                            padding-left: 25px;
+                            margin: 20px 0;
+
+                            background-image: url('/assets/icons/new_icon/orange/simple_check.webp');
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            background-position: left 0.3em;
+
+                            @include font-text($size: 13px);
+                            color: $color-text-secondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        //// SECTION CITATION FREELANCE ////
+        .freelance__citation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            width: 100%;
+            background-color: $background-section-secondary;
+
+            p {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                @include font-text($size: 11px);
+                color: $color-text-citation;
+            }
+
+            .citation {
+                width: 100%;
+                @include font-text($size: 30px);
+                color: $color-text-citation;
+            }
+        }
+
+        //// SECTION PRESENTATION ////
+        .presentation {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            max-width: 100%;
+            padding: 50px 20px 10px;
+            background-color: $background-section;
+            overflow: hidden;
+
+            .presentation__container {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 15px;
+                max-width: 100%;
+                margin-top: 25px;
+
+                .presentation__img {
+                    position: relative;
+                    max-width: 100%;
+                    margin: 25px auto 0;
+
+                    max-height: 482px;
+                    overflow: hidden;
+                    border-radius: 16px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                    }
+
+
+                    .img__absolute-text {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: rgba(10, 14, 23, 0.85);
+                        border-radius: 12px;
+                        width: 100%;
+                        max-width: 100%;
+
+                        .localisation__head {
+                            display: flex;
+                            flex-direction: row;
+                            min-height: 25px;
+                            margin: 0 5px 8px;
+                            max-width: 100%;
+
+                            img {
+                                max-width: 11px;
+                                margin-right: 10px;
+                            }
+
+                            p {
+                                display: inline-block;
+                                max-width: 95%;
+                                @include font-text($size: 13px);
+                                line-height: 13px;
+                                margin: 0;
+                                color: $color-title-tertiary;
+                            }
+                        }
+
+                        p {
+                            display: inline-block;
+                            margin: 0 5px 8px;
+                            max-width: 100%;
+                            @include font-text($size: 11px, $weight: 200);
+                            color: $color-text-secondary;
+                        }
+                    }
+                }
+
+                .presentation__text {
+                    max-width: 100%;
+                    margin: 0 auto;
+
+                    h2 {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-title($size: 25px);
+                        color: $color-title-secondary;
+                        margin: 10px 0 25px;
+                    }
+
+                    .text-primary {
+                        display: inline-block;
+                        max-width: 100%;
+                        @include font-text ($size: 14px);
+                        margin: 10px 0;
+                        color: $color-text-primary;
+                    }
+
+                    .text-secondary {
+                        display: inline-block;
+                        max-width: 80%;
+                        @include font-text ($size: 13px, $weight: 400);
+                        color: $color-title-tertiary;
+                    }
+
+                    .text-uppercase {
+                        display: inline-block;
+                        max-width: 80%;
+                        @include font-text ($size: 11px, $weight: 600);
+                        text-transform: uppercase;
+                        color: $color-text-exeption;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        max-width: 90%;
+                        padding: 0;
+                        margin: 35px 0 0 0;
+                        justify-content: flex-start;
+
+
+                        li {
+                            display: inline-block;
+                            margin: 5px 5px;
+                            padding: 3px 6px;
+                            border-radius: 15px;
+                            @include font-text($size: 9px);
+                            background-color: $maquette-card-secondary;
+                            color: $color-accent-tertiary;
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+        //// SECTION ETAPE DU PROJET ////
+
+        .etape-projet {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            padding: 50px 20px 10px;
+            overflow: hidden;
+            background-color: $background-section-secondary;
+
+
+            .head {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 35px;
+
+                h2 {
+                    display: inline-block;
+                    max-width: 90%;
+                    @include font-title($size: 25px);
+                    color: $color-title-secondary;
+                    margin: 10px 0;
+                }
+
+                .text-primary {
+                    display: inline-block;
+                    @include font-text ($size: 15px);
+                    margin: 10px 0;
+                    color: $color-text-primary;
+                }
+            }
+
+            .etape__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                background:
+                    radial-gradient(circle at center, #d775ef47 0%, $background-section-secondary 35%),
+                    #000;
+
+
+
+                .etape__card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    max-width: 280px;
+                    min-height: 220px;
+                    background-color: $project-card;
+                    border-radius: 16px;
+                    border: 1px solid $orange-card-tertiary;
+                    overflow: hidden;
+
+                    .etape__head {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 8px 15px;
+                        background-color: $project-card-secondary;
+
+                        p {
+                            @include font-text($size: 11px, $weight: 600);
+                            color: $color-text-exeption;
+                            text-transform: uppercase;
+                            //margin-left: 15px;
+
+                        }
+
+                        .img__container {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 25px;
+                            height: 25px;
+                            //margin-right: 15px;
+                            border-radius: 12px;
+                            background-color: $maquette-card-secondary;
+
+                            img {
+                                width: 14px;
+                            }
+
+                        }
+                    }
+
+                    .etape__main {
+                        display: flex;
+                        flex-direction: column;
+                        height: fit-content;
+                        margin: 0 10px 10px;
+
+                        h3 {
+                            @include font-title($size: 15px, $weight: 400);
+                            color: $color-title-tertiary;
+                            margin: 10px 0;
+                        }
+
+                        .main-text {
+                            @include font-text($size: 11px);
+                            color: $color-text-secondary;
+                            margin: 0;
+                        }
+                    }
+
+                    .etape__foot {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin: 5px 10px;
+                        border-top: 1px solid $color-text-citation;
+
+                        img {
+                            height: 12px;
+                            margin-right: 15px;
+                        }
+
+                        .foot-text {
+                            @include font-text($size: 9px);
+                            color: $color-accent;
+                            line-height: 20px;
+                            margin: 8px 0;
+                        }
+                    }
+                }
+
+                .foot {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 100%;
+                    gap: 20px;
+                    height: fit-content;
+                    background-color: $project-card;
+                    border-radius: 16px;
+                    margin-top: 45px;
+
+                    .img__container {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 8px 0;
+
+                        .img__content {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            margin-left: 15px;
+                            margin-right: 15px;
+                            border-radius: 50% 50%;
+                            background-color: rgba(76, 215, 246, 0.15);
+
+                            img {
+                                max-width: 50%;
+                            }
+                        }
+
+
+                        .img__text {
+
+                            .text-tertiary {
+                                @include font-text($size: 13px, $weight: 600);
+                                color: $color-title-tertiary;
+                            }
+
+                            .text-secondary {
+                                @include font-text($size: 12px);
+                                color: $color-text-secondary;
+                            }
+                        }
+                    }
+
+                    .cta__container {
+
+                        margin-right: 15px;
+                        line-height: 20px;
+
+                        .cta__contact {
+                            @include font-text($size: 13px, $weight: 600);
+                            color: $color-text-secondary;
+                            background-color: #262A34;
+                            text-decoration: none;
+                            padding: 10px 25px;
+                            border-radius: 8px;
+                            border: 0.5px solid $color-accent;
+
+                            &:hover {
+                                background-color: #2f3440;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        //// SECTION SAVOIR FAIRE ////
+        .savoir-faire {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px 10px;
+            background-color: $background-section;
+
+            h2 {
+                display: inline-block;
+                max-width: 75%;
+                text-align: center;
+                margin-top: 0;
+                @include font-title($size: 18px);
+                color: $color-title-secondary;
+
+            }
+
+            .orange-text {
+                @include font-title($size: 22px);
+                color: $color-accent;
+            }
+
+            .secondary-text {
+                display: inline-block;
+                max-width: 80%;
+                text-align: center;
+                @include font-text($size: 14px);
+                color: $color-text-secondary
+            }
+
+            .cta__container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                width: 100%;
+                margin-top: 35px;
+
+
+                .cta-contact {
+                    @include font-text($size: 16px);
+                    width: fit-content;
+                    padding: 6px 15px;
+                    margin: 0 auto;
+                    background-color: $color-accent;
+                    border: 1px solid $color-accent;
+                    color: black;
+                    text-decoration: none;
+                    box-sizing: border-box;
+
+
+                    img {
+                        width: 20px;
+                        margin-right: 15px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $color-accent_hover;
+                    }
+
+                }
+
+                .cta-simulateur {
+
+                    @include font-text($size: 16px);
+                    width: fit-content;
+                    padding: 6px 15px;
+                    margin: 0 auto;
+                    border: 1px solid $color-accent;
+                    background-color: $orange-card-secondary;
+                    color: $color-accent;
+                    text-decoration: none;
+                    box-sizing: border-box;
+
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid $color-accent_hover;
+                        color: $color-accent_hover;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                max-width: 100%;
+                padding: 0;
+                margin-top: 35px;
+
+                li {
+                    list-style: none;
+                    width: fit-content;
+                    padding-left: 20px;
+                    margin: 8px;
+
+                    background-image: url('/assets/icons/new_icon/blue/double-check.webp');
+                    background-repeat: no-repeat;
+                    background-size: 12px 12px;
+                    background-position: left 0.3em;
+
+                    @include font-text($size: 10px);
+                    color: $color-text-secondary;
+                }
+            }
+
+        }
+
+
+    }
+
+}

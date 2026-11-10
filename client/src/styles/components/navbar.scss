@@ -1,0 +1,341 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+
+@media (min-width: 768px) {
+
+
+    header {
+        position: relative;
+        width: 100%;
+        z-index: 999;
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid rgba($color-text-secondary, 0.2);
+            z-index: 50;
+            background-color: rgba(22, 22, 22, 0.75);
+            border: 0.5px solid rgba(128, 128, 128, 0.592);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+
+
+            .navbar__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 60px;
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 0 0.5rem;
+            }
+
+            /* LOGO */
+            .navbar__logo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: 1rem;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    object-fit: contain;
+                }
+
+                p {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+                    @include font-text();
+                    color: $color-text-secondary;
+                }
+            }
+
+
+
+            /* NAVIGATION DESKTOP */
+            .navbar__item {
+                display: flex;
+                width: 100%;
+                margin: 0;
+                padding: 0 1rem;
+                justify-content: center;
+                gap: 20px;
+                list-style: none;
+
+                .item_link {
+                    display: inline-block;
+                    padding: 0;
+                    min-width: 80px;
+                    text-decoration: none;
+                    text-align: center;
+                    @include font-text($size: 14px, $weight: 400);
+                    color: $color-text-exeption;
+
+                    &:hover {
+                        color: $items-orange;
+                    }
+
+                }
+            }
+
+
+
+            /* CTA DESKTOP */
+
+            .Link_cta {
+                display: block;
+                padding: 0 25px;
+                background-color: $orange-card-secondary;
+                color: $items-orange;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                border: 1px solid $items-orange;
+                height: fit-content;
+                line-height: 40px;
+                border-radius: 6px;
+
+                @include font-text($size: 15px, $weight: 400);
+
+                &:hover {
+                    color: $color-title;
+                    border: 1px solid $color-accent-secondary;
+
+                }
+
+            }
+
+            /* BURGER BUTTON */
+            .navbar__burger {
+                display: none;
+                cursor: pointer;
+
+            }
+
+            .navbar__mobile {
+                display: none;
+            }
+
+
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+
+
+
+
+    header {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+        width: 100vw;
+        z-index: 999;
+        overflow: hidden;
+
+        .navbar {
+            position: fixed;
+            box-sizing: border-box;
+            width: 100%;
+            top: 0;
+            border-bottom: 1px solid rgba($color-text-secondary, 0.2);
+            z-index: 50;
+            background-color: rgba(7, 6, 25, 0.7);
+
+            border: 0.5px solid rgba(128, 128, 128, 0.592);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+
+
+            .navbar__container {
+                display: flex;
+                justify-content: space-between;
+                justify-self: center;
+                align-items: center;
+                height: 60px;
+                width: 97%;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* LOGO */
+            .navbar__logo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-right: auto;
+                margin-left: 10px;
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                    object-fit: contain;
+                    margin-right: 25px;
+                }
+
+                p {
+                    display: block;
+                    margin: 0;
+                    @include font-text();
+                    color: $color-text-secondary;
+                    text-align: center;
+                }
+            }
+
+
+            .navbar__mobile {
+                position: fixed;
+                top: 61px;
+                right: 0;
+                width: 100%;
+                height: fit-content;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                padding: 0;
+                margin: 0;
+                flex-direction: column;
+                align-items: flex-end;
+                z-index: 49;
+                overflow: hidden;
+
+
+
+                .navbar__item--mobile {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: flex-end;
+                    justify-content: space-around;
+                    width: 100%;
+                    opacity: 0.95;
+                    padding: 0;
+                    margin: 0;
+                    //background-color: $maquette-card-secondary;
+                    background-color: $background-section-tertiary;
+                    border-bottom: 1px solid rgba($color-text-secondary, 0.2);
+                    animation: slideDown 0.3s ease-out;
+
+                    @keyframes slideDown {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-100%);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 70%;
+                        height: fit-content;
+                        list-style-type: none;
+
+
+
+                        .item_link {
+                            display: inline-block;
+                            padding: 0;
+                            width: 100%;
+                            min-width: 80px;
+                            @include font-text($size: 13px, $weight: 400);
+                            text-decoration: none;
+                            line-height: 45px;
+                            text-align: center;
+                            color: $color-text-primary;
+
+                        }
+                    }
+
+
+                }
+
+                .Link_cta_mobile {
+                    display: block;
+                    width: fit-content;
+                    padding: 0 25px;
+                    @include font-text($size: 15px, $weight: 400);
+                    background-color: $background-section-secondary;
+                    color: $items-orange;
+                    text-decoration: none;
+                    line-height: 40px;
+                    text-align: center;
+                    border: 0.5px solid $items-orange;
+                    border-radius: 0 0 0 5px;
+                    margin-top: 6px;
+
+                    animation: slideDown 0.3s ease-out;
+
+                    @keyframes slideDown {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-100%);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                }
+            }
+
+
+            .navbar__item,
+            .Link_cta {
+                display: none;
+
+            }
+
+            .navbar__burger {
+                display: block;
+                background-color: transparent;
+                border: none;
+                box-sizing: border-box;
+                padding: 3px;
+
+                .navbar__burger-icon {
+                    height: 37px;
+                    width: 37px;
+                    object-fit: contain;
+                }
+            }
+
+            &.is-open {
+                .navbar__mobile {
+                    display: flex;
+
+                    .navbar__mobile--open {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .navbar__mobile {
+                display: none;
+            }
+
+
+
+
+
+
+        }
+    }
+}

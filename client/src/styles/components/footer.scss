@@ -1,0 +1,156 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+.footer {
+    width: 100%;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba($color-text-primary, 0.1);
+    position: relative;
+    z-index: 500;
+    box-sizing: border-box;
+    background-color: $background-section-secondary;
+
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 3rem;
+        }
+
+
+        .footer__column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-wrap: wrap;
+            min-width: 0;
+            word-break: break-word;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                word-break: break-word;
+
+
+            }
+
+            li,
+            p,
+            a,
+            span {
+                line-height: 1.6;
+                word-break: break-word;
+                white-space: normal; // ✅ autorise le retour à la ligne
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+
+
+            .footer__title {
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.02em;
+                @include font-title($size: 15px);
+                color: $color-title-secondary;
+            }
+
+            .footer__link {
+
+                text-decoration: none;
+                transition: color 0.3s ease, opacity 0.3s ease;
+                display: inline-block; // ✅ permet le retour à la ligne naturel
+                word-break: break-word;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+
+                &:hover {
+                    color: $color-title-tertiary;
+                    opacity: 1;
+                }
+            }
+
+            // --- Statut ---
+            .footer__label,
+            .footer__status-text {
+                @include font-text($size: 11px);
+            }
+
+            .footer__status {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap; // ✅ s’étale sur la hauteur si la largeur ne suffit plus
+                gap: 0.6rem;
+                word-break: break-word;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+
+            .footer__status-dot {
+                position: relative;
+                display: flex;
+                height: 0.75rem;
+                width: 0.75rem;
+                flex-shrink: 0;
+            }
+
+            .footer__ping {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                background-color: $color-accent;
+                opacity: 0.75;
+                animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            }
+
+            .footer__dot {
+                position: relative;
+                height: 0.75rem;
+                width: 0.75rem;
+                border-radius: 50%;
+                background-color: $color-accent;
+                box-shadow: 0 0 8px rgba($color-accent, 0.8);
+            }
+        }
+    }
+
+    .footer__bottom {
+        text-align: center;
+        margin-top: 3rem;
+        max-width: 1200px;
+        margin-inline: auto;
+        padding: 0 2rem;
+        word-break: break-word;
+        @include font-text($size: 13px);
+        color: $color-text-exeption;
+    }
+}
+
+// Animation du point de statut
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+
+    75% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,374 @@
+// ===============================
+// 🎨 MIXINS ATLANTIQUE DEV
+// ===============================
+
+// ===============================
+// 📌 POLICES — OPTIMISÉ
+// ===============================
+
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('/fonts/Parkinsans/static/Parkinsans-Regular.ttf') format('truetype');
+    src: url('/fonts/Parkinsans/static/Parkinsans-Bold.ttf') format('truetype');
+    src: url('/fonts/Parkinsans/static/Parkinsans-Medium.ttf') format('truetype');
+    src: url('/fonts/Parkinsans/static/Parkinsans-SemiBold.ttf') format('truetype');
+    src: url('/fonts/Parkinsans/static/Parkinsans-Light.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/fonts/Audiowide/Audiowide-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/fonts/SourceCodePro/latin-normal/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevW.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/fonts/SourceCodePro/latin-normal/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevW.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/fonts/SourceCodePro/latin-italic/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvUlMI.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+// ===============================
+// 🎨 VARIABLES
+// ===============================
+
+$border-radius: 15px 35px 15px 15px;
+
+$color-shadow: rgb(148, 67, 230);
+$light: #fefefe; //bordure lumineuse
+$neon: rgb(143, 0, 186);
+
+
+$color-title: rgb(212, 212, 212); //titre
+$color-text: rgb(181, 181, 181); //text
+$color-text_secondaire: rgb(0, 218, 222); //text style terminal titre
+$color-list: rgb(154, 119, 251); //couleur text li
+$color-list_dark: rgb(56, 56, 56);
+$color-list_fullDark: rgb(33, 33, 33);
+
+$bg_section: linear-gradient(135deg, rgb(8, 8, 8), rgb(12, 12, 12)); // bg section
+//$bg_section: linear-gradient(135deg, rgb(149, 149, 149), rgb(172, 172, 172)); // bg section
+$bg_section-title: linear-gradient(90deg, rgb(35, 0, 44), rgb(8, 8, 8)); // bg titre de section
+
+//$bg_section-title: linear-gradient(90deg, rgb(0, 187, 255), rgb(5, 0, 19));
+//$bg_article: linear-gradient(90deg, rgb(16, 0, 31), rgb(35, 0, 44));
+$bg_article: linear-gradient(90deg, rgb(40, 14, 81), rgb(9, 11, 112)); // bg article rgb(19, 24, 111)
+$bg_article_absolute: linear-gradient(90deg, rgb(7, 8, 87), rgb(32, 11, 64)); // bg article rgb(19, 24, 111)
+$bg_list: linear-gradient(135deg, rgba(49, 0, 76, 0.312), rgba(9, 0, 54, 0.264)); // bg liste generale
+$bg_article-secondaire: linear-gradient(135deg, rgb(29, 33, 59), rgb(25, 30, 59)); //bg article description
+$bg_section-engine: linear-gradient(135deg, rgb(23, 7, 54), rgb(5, 4, 41)); // bg section ingenierie
+$bg_article-engine: linear-gradient(135deg, #4a0083, #0d0086); // bg article foot
+$bg_article-engine-reverse: linear-gradient(135deg, #32005e, #290049); //bg contenu article foot
+$bg_item-mobile: linear-gradient(135deg, rgba(13, 0, 25, 0.952), rgba(0, 73, 91, 0.945));
+$bg_article-faq: linear-gradient(135deg, rgb(10, 87, 202), rgb(29, 0, 109)); // bg article
+
+
+
+
+
+$color-bg-hover: #ffffff;
+$color-accent: #008ae0;
+$color-cta: #002050;
+$color-estomp: #1f6eb7; //bordure sombre
+$bg_cta: rgba(0, 114, 196, 0.592); //background cta mobile
+
+
+
+
+$bg-container: #848484db;
+$bg-card: #0c2a45;
+$bg-card_hover: #0d304e;
+
+
+$color-soft: rgb(198, 198, 198);
+$color-dark: #2b2b2b;
+$color-muted: rgba(255, 255, 255, 0.1);
+
+$bg-dark: #050C17;
+$bg-darker: #02060C;
+$bg-panel: #0A1624;
+$bg-soft: #0F1E33;
+
+$terminal-border: #0F1E33; //bordure terminal 
+/*
+$terminal-bg: #02060C;
+
+$terminal-text: #E6EEF7;
+$terminal-prompt: #00E5FF;
+$terminal-success: #00C853;
+$terminal-error: #FF1744;
+$terminal-comment: #6C7A8A;
+*/
+
+$bg-card: rgb(22, 23, 26);
+$bg-card_dark: #0A131B;
+
+/*
+$cffy-theme-custom-a0: rgb(9.41% 0.941% 10.8%);
+$cffy-theme-custom-a10: rgb(60.2% 8% 68.2%);
+$cffy-theme-custom-a20: rgb(20.2% 1.41% 33.4%);
+$cffy-theme-custom-a30: rgb(7.06% 0% 7.06%);
+$cffy-theme-custom-a40: rgb(32.5% 0.941% 34.8%);
+*/
+// ===============================
+// 🅰️ POLICE PRINCIPALE
+// ===============================
+
+//$font-main: "Source Code Pro", monospace;
+$font-main: 'Parkinsans', sans-serif;
+$font-title: 'Audiowide', sans-serif;
+$font-secondary: 'Audiowide', sans-serif;
+
+
+@mixin font-main($weight: 400, $size: 1rem, $line: 1.3rem, $letter-spacing: 0.03rem) {
+    font-family: $font-main;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin font-title($weight: 400, $size: 1rem, $line: 1.3rem, $letter-spacing: 0.03rem) {
+    font-family: $font-title;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin font-secondary($weight: 400, $size: 1rem, $line: 1.8rem, $letter-spacing: 0.03rem) {
+    font-family: $font-secondary;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin terminal-line() {
+    color: #00ff66;
+}
+
+// ===============================
+// 🔧 MIXINS VISUELS
+// ===============================
+
+@mixin theme-bg($background: $bg-dark, $color: $color-text) {
+    background-color: $background;
+    color: $color;
+}
+
+@mixin navbar_accent($color: $color-text) {
+    color: $color;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $color;
+    }
+}
+
+
+@mixin text_color($color: $color-text) {
+    color: $color;
+}
+
+@mixin text_soft($color: $color-soft) {
+    color: $color;
+}
+
+@mixin text_label($color: $color-soft) {
+    color: $color;
+}
+
+@mixin hero-style ($background: linear-gradient(135deg, #0e0019, rgb(7, 7, 11))) {
+    background: $background;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+@mixin main-style ($background: rgb(0, 12, 24)) {
+    background-color: $background;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+@mixin background($background: $bg-section) {
+    background: $background;
+
+}
+
+
+@mixin gradient-style() {
+    .mesh-gradient {
+        position: relative;
+
+    }
+
+}
+
+
+
+@mixin glass($blur: 20px, $opacity: 0.8, $background-color: null, $border: 1px solid $color-estomp) {
+    @if $background-color ==null {
+        background-color: rgba($color-shadow, $opacity);
+    }
+
+    @else {
+        background-color: $background-color;
+    }
+
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+    border: $border;
+}
+
+@mixin gradient-trans($opacity: 0.8, $background: linear-gradient(90deg, #1c03281d rgb(15, 2, 20), #1e032825)) {
+    background: $background;
+    opacity: $opacity;
+}
+
+// ===============================
+// BORDER
+// ===============================
+
+@mixin border_color($color: $color-estomp, $alpha: 1, $border-radius: 8px) {
+    border: 0.5px solid rgba($color, $alpha);
+    border-radius: $border-radius;
+}
+
+@mixin border($color: $color-shadow, $border: 0.5px solid $color) {
+    border: $border;
+    border-radius: 15px;
+}
+
+// ===============================
+// SHADOW
+// ===============================
+
+@mixin shadow($x: 0, $y: 4px, $blur: 20px, $color: rgba($color-shadow, 1)) {
+    box-shadow: $x $y $blur $color;
+}
+
+@mixin bg_shadow($background: #020f21, $border-radius: 50px, $box-shadow: 0 0 50px 400px #020e1f) {
+    background: $background;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}
+
+@mixin text-shadow($text-shadow: -8px 8px 4px rgb(0, 0, 0)) {
+    text-shadow: $text-shadow;
+}
+
+@mixin light-shadow($width: 100%, $border-radius: 50%, $opacity: 0.2, $box-shadow: 0 0 15px 15px #ffffff, $background: $light-shadow) {
+    opacity: $opacity;
+    width: $width;
+    border-radius: $border-radius;
+    background: $background;
+    box-shadow: $box-shadow;
+}
+
+// ===============================
+// CTA BLEU
+// ===============================
+
+@mixin CTA_bg_theme ($background: $color-cta, $border: 0.5px solid $color-text) {
+    border: $border;
+    background-color: $background;
+    padding: 0.5rem 1.5rem;
+}
+
+@mixin CTA_Link_theme($color: $color-shadow) {
+    @include font-main(400, 0.9rem);
+    display: inline-block;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-align: center;
+    color: $color;
+}
+
+@mixin CTA_Link_theme-hover($color: $color-text, $background: $color-estomp) {
+    background-color: $background;
+    color: $color;
+}
+
+// ===============================
+// CTA NEUTRE
+// ===============================
+
+@mixin CTA_bg ($border: 0.5px solid $color-cta, $padding: 0) {
+    border: $border;
+    background-color: $color-shadow;
+    padding: $padding;
+}
+
+@mixin CTA_Link($color: $color-cta) {
+    @include font-main(400, 1rem, 1.3rem, 0.5px);
+    display: inline-block;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-align: center;
+    color: $color;
+}
+
+
+@mixin CTA_Link-hover($color: $color-text) {
+    color: $color-text;
+}
+
+
+
+
+// ===============================
+// CTA Mobile
+// ===============================
+
+@mixin CTA_bg-mobile ($border: 0.5px solid $color-cta, $padding: 0.8rem 0) {
+    border: $border;
+    background-color: $bg_cta;
+    padding: $padding;
+}
+
+@mixin CTA_Link-mobile($color: $color-text_secondaire) {
+    text-decoration: none;
+    text-align: center;
+    color: $color;
+}
+
+
+@mixin CTA_bg-close ($border: 0.5px solid $color-cta, $padding: 0.8rem 0) {
+    border: $border;
+    background-color: $color-list_dark;
+    padding: $padding;
+}
+
+@mixin CTA_Link-close($color: $color-text) {
+    text-decoration: none;
+    text-align: center;
+    color: $color;
+}
+
+@mixin CTA_close-hover($background: $color-list_fullDark, $color: $color-text) {
+    color: $color-text;
+    background-color: $background;
+}

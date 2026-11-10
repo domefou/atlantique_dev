@@ -1,0 +1,396 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+
+@media (min-width:789px) {
+    .paiement {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $background-section;
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+
+        .paiement__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin-top: 30px;
+            padding: 0 50px;
+
+
+            .paiement__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 100%;
+                margin-bottom: 20px;
+
+                h1 {
+                    margin: 0 0 25px 0;
+                    @include font-title($size: 40px, $weight: 600);
+                    color: $color-title-secondary;
+
+                }
+
+                .orange {
+                    color: $color-accent;
+                }
+
+            }
+
+            .paiement__main {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                min-height: 400px;
+                gap: 20px;
+
+                .text__intro {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    max-width: 40%;
+                    padding: 10px 25px;
+                    z-index: 5;
+
+                    p {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-text($size: 15px);
+                        color: $color-text-primary;
+                        margin: 0;
+                        line-height: 25px;
+                    }
+
+                    .orange {
+                        @include font-text($size: 22px, $weight: 600);
+                        color: $color-accent;
+                    }
+
+                    .blue_stripe {
+                        @include font-text($size: 18px, $weight: 600);
+                        color: $color-accent-secondary;
+                    }
+
+                    .succes_paiement {
+                        @include font-text($size: 32px, $weight: 800);
+                        color: $color-accent-secondary;
+
+                    }
+
+                    .error_paiement {
+                        @include font-text($size: 32px, $weight: 800);
+                        color: $color-accent-tertiary;
+
+                    }
+
+                    .link_paiement {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        min-height: 30px;
+                        width: fit-content;
+                        padding: 10px 20px;
+                        margin: 8px 0;
+                        border: 1px solid $color-accent;
+                        background-color: $orange-card-secondary;
+                        color: $color-accent;
+                        text-decoration: none;
+                        box-sizing: border-box;
+                        @include font-text($size: 15px);
+
+                        &:hover {
+
+                            cursor: pointer;
+                            border: 1px solid $color-accent;
+                            background-color: $orange-card-secondary_hover;
+                            color: $color-title;
+                        }
+                    }
+                }
+
+
+                /* Formulaire */
+                .paiement-form {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    padding: 0 25px;
+                    box-sizing: border-box;
+                    width: 50%;
+                    min-width: 40%;
+
+                    padding: 0 50px;
+                    //border-left: 0.5px solid rgb(94, 95, 98);
+
+                    fieldset {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        border: none;
+
+
+                        label {
+                            display: block;
+                            margin: 25px 0 10px;
+                            @include font-text($size: 15px);
+                            color: $color-text-primary;
+                        }
+
+                        input {
+                            width: 100%;
+                            min-height: 35px;
+                            margin: 10px 0 0 0;
+                            box-sizing: border-box;
+                            background-color: $background-hero-list;
+                            @include font-text($size: 15px);
+                            color: $color-text-primary;
+                        }
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 8px;
+                            min-height: 30px;
+                            min-width: 28%;
+                            width: 45%;
+                            padding: 10px 20px;
+                            margin: 8px 0;
+                            border: 1px solid $color-accent;
+                            background-color: $orange-card-secondary;
+                            color: $color-accent;
+                            text-decoration: none;
+                            box-sizing: border-box;
+                            @include font-text($size: 15px);
+
+                            &:hover {
+
+                                cursor: pointer;
+                                border: 1px solid $color-accent;
+                                background-color: $orange-card-secondary_hover;
+                                color: $color-title;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .form-status {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:789px) {
+
+    .paiement {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $background-section;
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+
+        .paiement__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 100%;
+            margin-top: 30px;
+            padding: 0 10px;
+
+
+            .paiement__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 80%;
+                margin-bottom: 20px;
+
+                h1 {
+                    margin: 0;
+                    @include font-title($size: 32px, $weight: 600);
+                    color: $color-title-secondary;
+
+                }
+
+                .orange {
+                    color: $color-accent;
+                }
+
+            }
+
+            .paiement__main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                min-height: 400px;
+                gap: 20px;
+
+                .text__intro {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    max-width: 100%;
+                    padding: 10px;
+                    z-index: 5;
+
+                    p {
+                        display: inline-block;
+                        max-width: 90%;
+                        @include font-text($size: 13px);
+                        color: $color-text-primary;
+                        margin: 0;
+                        line-height: 25px;
+                    }
+
+                    .orange {
+                        @include font-text($size: 18px, $weight: 600);
+                        color: $color-accent;
+                    }
+
+                    .blue_stripe {
+                        @include font-text($size: 16px, $weight: 600);
+                        color: $color-accent-secondary;
+                    }
+
+                    .succes_paiement {
+                        @include font-text($size: 28px, $weight: 800);
+                        color: $color-accent-secondary;
+
+                    }
+
+                    .error_paiement {
+                        @include font-text($size: 28px, $weight: 800);
+                        color: $color-accent-tertiary;
+
+                    }
+
+
+
+                    .link_paiement {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        min-height: 35px;
+                        width: fit-content;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        border: 1px solid $color-accent;
+                        background-color: $orange-card-secondary;
+                        color: $color-accent;
+                        text-decoration: none;
+                        box-sizing: border-box;
+                        @include font-text($size: 13px);
+
+                        &:hover {
+
+                            cursor: pointer;
+                            border: 1px solid $color-accent;
+                            background-color: $orange-card-secondary_hover;
+                            color: $color-title;
+                        }
+                    }
+
+                }
+
+
+
+                /* Formulaire */
+                .paiement-form {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-start;
+                    min-height: 250px;
+                    margin-top: 40px;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    max-width: 100%;
+                    //border-left: 0.5px solid rgb(94, 95, 98);
+
+                    fieldset {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        border: none;
+
+
+                        label {
+                            display: block;
+                            margin: 25px 0 10px;
+                            @include font-text($size: 15px);
+                            color: $color-text-primary;
+                        }
+
+                        input {
+                            width: 100%;
+                            min-height: 35px;
+                            margin: 10px 0 0 0;
+                            box-sizing: border-box;
+                            background-color: $background-hero-list;
+                            @include font-text($size: 15px);
+                            color: $color-text-primary;
+                        }
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 8px;
+                            min-height: 35px;
+                            min-width: 40%;
+                            padding: 12px 20px;
+                            margin: 8px 0;
+                            border: 1px solid $color-accent;
+                            background-color: $orange-card-secondary;
+                            color: $color-accent;
+                            text-decoration: none;
+                            box-sizing: border-box;
+                            @include font-text($size: 13px);
+
+                            &:hover {
+
+                                cursor: pointer;
+                                border: 1px solid $color-accent;
+                                background-color: $orange-card-secondary_hover;
+                                color: $color-title;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .form-status {
+                    margin-top: 10px;
+                }
+
+                .form_error {
+                    color: rgb(185, 15, 15);
+                    margin-top: 10px;
+                }
+            }
+        }
+
+    }
+
+}

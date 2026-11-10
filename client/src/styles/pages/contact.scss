@@ -1,0 +1,424 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+.bubble-section__head {
+    width: fit-content;
+    margin-bottom: 15px;
+    border: 1px solid $color-accent-secondary;
+    background-color: $bubble-info;
+    border-radius: 35px;
+    @include font-text($size: 9px);
+
+    .text-accent__secondary {
+        display: inline-block;
+        width: fit-content;
+        margin: 0;
+        padding: 3px 10px;
+        color: $color-accent-secondary;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width:789px) {
+
+
+
+    /* Structure générale */
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background-section;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+
+
+
+
+        .contact__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin-top: 30px;
+            gap: 30px;
+
+
+            .contact__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 100%;
+                margin-bottom: 20px;
+
+                h1 {
+                    margin: 0 0 45px 0;
+                    @include font-title($size: 40px, $weight: 600);
+                    color: $color-title-secondary;
+
+                }
+
+                .orange {
+                    color: $color-accent;
+                }
+
+                .text__intro {
+                    display: flex;
+                    max-width: 100%;
+                    padding: 10px 25px;
+                    z-index: 5;
+                    background-color: #0706199e;
+                    padding-left: 15px;
+                    margin-left: 15px;
+                    border-left: 3px solid $color-accent;
+
+                    p {
+                        display: inline-block;
+                        max-width: 70%;
+                        @include font-text($size: 15px);
+                        color: $color-text-primary;
+                        margin: 0;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+
+
+
+        /* Conteneur principal */
+        .contact-container {
+            display: flex;
+            width: 75%;
+            gap: 40px;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 15px auto 30px auto;
+            padding: 25px;
+            border-radius: 4px;
+
+
+            border: 0.5px solid $color-text-exeption;
+            background: linear-gradient(135deg, rgb(1, 0, 14), rgb(15, 15, 15));
+            @include font-text($size: 15px);
+            color: $color-text-primary;
+        }
+
+        /* Colonne gauche */
+        .contact-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                @include font-title($size: 24px);
+                color: $color-title-secondary;
+            }
+
+            .intro {
+                max-width: 500px;
+                margin: 0;
+                @include font-text($size: 15px);
+                color: $color-text-primary;
+            }
+
+            p {
+                margin: 0;
+                @include font-text($size: 15px);
+                color: $color-text-primary;
+
+            }
+
+            strong {
+                display: inline-block;
+                margin: 20px 0 5px;
+                @include font-text($size: 15px);
+                color: $color-accent;
+            }
+        }
+
+
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                margin-bottom: 10px;
+                @include font-title($size: 18px);
+                color: $color-title-secondary;
+            }
+        }
+
+
+        /* Formulaire */
+        .contact-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 25px;
+            box-sizing: border-box;
+            //border-left: 0.5px solid rgb(94, 95, 98);
+
+
+            label {
+                display: block;
+                margin: 25px 0 10px;
+                @include font-text($size: 15px);
+                color: $color-text-primary;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                min-height: 35px;
+                box-sizing: border-box;
+                background-color: $background-hero-list;
+                @include font-text($size: 15px);
+                color: $color-text-primary;
+            }
+
+            option {
+                width: 100%;
+                min-height: 30px;
+                box-sizing: border-box;
+
+                background-color: $background-hero-list;
+                @include font-text($size: 15px);
+                color: $color-text-primary;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                min-height: 30px;
+                min-width: 28%;
+                width: 45%;
+                padding: 10px 20px;
+                margin: 8px 0;
+                border: 1px solid $color-accent;
+                background-color: $orange-card-secondary;
+                color: $color-accent;
+                text-decoration: none;
+                box-sizing: border-box;
+
+                &:hover {
+
+                    cursor: pointer;
+                    border: 1px solid $color-accent;
+                    background-color: $orange-card-secondary_hover;
+                    color: $color-title;
+                }
+            }
+        }
+
+        .form-status {
+            margin-top: 10px;
+        }
+    }
+
+}
+
+@media (max-width:789px) {
+
+
+    /* Structure générale */
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background-section;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+
+
+
+
+        .contact__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin-top: 30px;
+            gap: 30px;
+
+
+            .contact__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 100%;
+                margin-bottom: 25px;
+                gap: 5px;
+
+                h1 {
+                    margin: 0 0 15px 0;
+                    @include font-title($size: 25px, $weight: 600);
+                    color: $color-title-secondary;
+
+                }
+
+                .orange {
+                    color: $color-accent;
+                }
+
+                .text__intro {
+                    display: flex;
+                    max-width: 100%;
+                    padding-left: 7px;
+                    margin-left: 15px;
+                    border-left: 3px solid $color-accent;
+                    z-index: 5;
+                    background-color: #0706199e;
+
+                    p {
+                        display: inline-block;
+                        max-width: 100%;
+                        @include font-text($size: 13px);
+                        color: $color-text-primary;
+                        margin: 0 0 0 10px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+
+
+
+        /* Conteneur principal */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            gap: 5px;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 6px;
+
+
+            border: 0.5px solid $color-text-exeption;
+            background-color: $background-section-secondary;
+            @include font-text($size: 13px);
+            color: $color-text-primary;
+        }
+
+        /* Colonne gauche */
+        .contact-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            @include font-text($size: 13px);
+            color: $color-text-primary;
+
+
+            h2 {
+                @include font-title($size: 18px);
+                color: $color-title-secondary;
+            }
+
+            .intro {
+                max-width: 90%;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+
+            p {
+                margin: 0;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+
+            }
+
+            strong {
+                display: inline-block;
+                margin: 15px 0 5px 0;
+                @include font-text($size: 13px);
+                color: $color-accent;
+            }
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+
+
+        /* Formulaire */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 35px;
+
+
+            label {
+                display: block;
+                width: 100%;
+                margin: 25px 0 5px;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+
+            input,
+            select,
+            textarea {
+                max-width: 95%;
+                min-height: 35px;
+                box-sizing: border-box;
+                background-color: $background-hero-list;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+
+            option {
+                width: 100%;
+                min-height: 30px;
+                box-sizing: border-box;
+                background-color: $background-hero-list;
+                @include font-text($size: 13px);
+                color: $color-text-primary;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                min-height: 30px;
+                min-width: 28%;
+                width: 45%;
+                padding: 10px 20px;
+                margin: 8px 0;
+                border: 1px solid $color-accent;
+                background-color: $orange-card-secondary;
+                color: $color-accent;
+                text-decoration: none;
+                box-sizing: border-box;
+
+                &:hover {
+
+                    cursor: pointer;
+                    border: 1px solid $color-accent;
+                    background-color: $orange-card-secondary_hover;
+                    color: $color-title;
+                }
+            }
+        }
+
+        .form-status {
+            margin-top: 10px;
+        }
+    }
+}

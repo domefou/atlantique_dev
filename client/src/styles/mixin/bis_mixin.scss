@@ -1,0 +1,127 @@
+//titre
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+//text
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+@mixin font-marque ($weight: 400, $style: normal, $size: 20px) {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+
+@mixin font-title-hero ($weight: 600, $style: normal, $size: 40px) {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+;
+
+@mixin font-title-hero_secondary ($weight: 600, $style: normal, $size: 48px) {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+;
+
+
+@mixin font-title ($weight: 600, $style: normal, $size: 40px) {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+;
+
+@mixin font-text ($weight: 400, $style: normal, $size: 16px) {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+;
+
+
+
+//couleur titre et texte
+$color-title: #FFFFFF;
+$color-title-secondary: #DCDCDC;
+$color-title-tertiary: #DFE2EF;
+
+$color-text-primary: #BABABA;
+$color-text-secondary: #CBC3D7;
+$color-text-tertiary: #DFE2EF;
+$color-text-citation: #b58ecf;
+$color-text-exception: #005564;
+$color-text-form: #969171;
+
+
+
+$color-text-exeption: #8E8E8E;
+$cookie-text: #374151;
+
+$color-accent: #F6B24C;
+$color-utils: #4c330c;
+$color-accent_hover: #f6d74c;
+$color-accent-secondary: #5295eb;
+$color-accent-tertiary: #D775EF;
+
+
+//color titre et texte card
+
+
+//background section et article
+$background-hero: #041369 to #000000;
+$background-section: #070619;
+$background-section-secondary: #050411;
+$background-section-tertiary: #130822;
+
+$background-hero-list: #101219;
+
+//bulle d'information
+$identity-block: rgba(10, 14, 23, 0.85);
+$bubble-info: #0b0f1a;
+$bubble-hero: #0095FF;
+
+//background card
+$card-hero: #101219;
+
+//section definir un projet
+$orange-card: #0D0907;
+$orange-card-secondary: #160D0D; //cta orange sombre
+$orange-card-secondary_hover: #392a13; //cta orange hover
+$orange-card-tertiary: #362408;
+$orange-card-quaternary: #191123 to #000000;
+$items-orange: #F6B24C;
+
+//section maquette
+$maquette-card: #0d0d11;
+$maquette-card-secondary: #262A34;
+$maquette-card-tertiary: rgba(10, 14, 23, 0.8);
+
+//section freelance plutot qu'agence
+$freelance-card: #141230;
+$freelance-card-secondary: rgba(38, 42, 52, 0.6);
+$freelance-dark-card: #0D0B1F;
+$freelance-dark-card-secondary: rgba(28, 31, 41, 0.3);
+$freelance-smooth-card: #181B25;
+
+//section suivre un projet
+$project-card: #1C1F29;
+$project-card-secondary: rgba(10, 14, 23, 0.4);

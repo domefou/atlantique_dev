@@ -1,0 +1,271 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+@media (min-width: 789px) {
+
+    .module {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+
+
+        .container_init {
+            display: flex;
+            justify-content: center;
+            min-height: 130px;
+            background-color: $orange-card-secondary;
+            border-radius: 8px;
+            border: 1px solid $orange-card-tertiary;
+
+            .final-text {
+                display: inline-block;
+                max-width: 80%;
+                width: fit-content;
+                animation: textFade 0.25s ease;
+                text-align: justify;
+
+                @include font-text($size: 15px);
+                color: $items-orange;
+                line-height: 25px;
+            }
+
+            @keyframes textFade {
+                from {
+                    opacity: 0;
+                    transform: translateY(4px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+
+        .functions_wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 25px 0;
+            border: 1px solid #f6b24c00;
+
+            .prestation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 120px;
+                height: 100px;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+                img {
+                    margin-top: 10px;
+                    width: 40px;
+                }
+
+                h3 {
+                    @include font-text($size: 15px);
+                    color: $color-text-primary;
+                }
+
+
+
+                &:hover {
+                    cursor: default;
+                    transform: translateY(0);
+                    box-sizing: border-box;
+                    border: 1px solid $orange-card-tertiary;
+                    background-color: $orange-card-secondary;
+
+
+                    h3 {
+                        color: $items-orange;
+                    }
+
+                }
+            }
+
+
+
+            .special-card {
+                width: 120px;
+                border-radius: 4px;
+
+
+
+
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(0);
+                    box-sizing: border-box;
+                    border: 1px solid $color-accent-secondary;
+
+
+                    a {
+                        color: $color-accent-secondary;
+                        @include font-text($size: 15px, $weight: 600);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    @include font-text($size: 15px);
+                    color: $color-text-primary;
+
+                    p {
+                        text-decoration: none;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (max-width: 789px) {
+
+    .module {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+
+
+        .container_init {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 160px;
+            width: 100%;
+            background-color: $orange-card-secondary;
+            border-radius: 8px;
+            border: 1px solid $orange-card-tertiary;
+
+            .final-text {
+                display: inline-block;
+                max-width: 90%;
+                width: fit-content;
+                animation: textFade 0.25s ease;
+                text-align: left;
+
+                @include font-text($size: 15px);
+                color: $items-orange;
+                line-height: 25px;
+            }
+
+            @keyframes textFade {
+                from {
+                    opacity: 0;
+                    transform: translateY(4px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+
+        .functions_wrapper {
+            display: flex;
+            flex-direction: row;
+            max-width: 95%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 25px 0;
+            border: 1px solid #f6b24c00;
+
+            .prestation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 95px;
+                height: 100px;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+                img {
+                    margin-top: 10px;
+                    width: 28px;
+                }
+
+                h3 {
+                    @include font-text($size: 13px);
+                    color: $color-text-primary;
+                }
+
+
+
+                &:hover {
+                    cursor: default;
+                    transform: translateY(0);
+                    box-sizing: border-box;
+                    border: 1px solid $orange-card-tertiary;
+                    background-color: $orange-card-secondary;
+
+                    img {
+                        //filter: brightness(0) saturate(100%) invert(73%) sepia(58%) saturate(1136%) hue-rotate(342deg) brightness(101%) contrast(93%);
+                    }
+
+                    h3 {
+                        color: $items-orange;
+                    }
+
+                }
+            }
+
+
+
+            .special-card {
+                width: 110px;
+                border-radius: 4px;
+
+
+
+
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(0);
+                    box-sizing: border-box;
+                    border: 1px solid $color-accent-secondary;
+
+                    a {
+                        color: $color-title;
+                        @include font-text($size: 15px, $weight: 600);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    @include font-text($size: 15px);
+                    color: $color-accent-secondary;
+
+                    p {
+                        text-decoration: none;
+                    }
+                }
+
+            }
+
+        }
+    }
+}

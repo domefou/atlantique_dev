@@ -1,0 +1,573 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+html {
+    scroll-behavior: smooth;
+    /* effet de scroll fluide */
+}
+
+/* Ajuste la position d’arrivée des ancres */
+.expertise-detail {
+    scroll-margin-top: 30vh;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Quand l’ancre est ciblée */
+.expertise-detail:target {
+    background-color: $orange-card-secondary;
+    border: 0.2px solid $color-accent;
+    /* halo violet doux */
+    border-radius: 8px;
+    z-index: 15;
+
+}
+
+.expertise-detail:target>h3 {
+    color: $color-accent;
+}
+
+.bubble-section__head {
+    width: fit-content;
+    margin-bottom: 15px;
+    border: 1px solid $color-accent-secondary;
+    background-color: $bubble-info;
+    border-radius: 35px;
+    @include font-text($size: 9px);
+
+    .text-accent__secondary {
+        display: inline-block;
+        width: fit-content;
+        margin: 0;
+        padding: 3px 10px;
+        color: $color-accent-secondary;
+        text-transform: uppercase;
+    }
+}
+
+
+
+@media (min-width: 789px) {
+    .expertise {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background-section;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+
+
+        .expertise__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin-top: 30px;
+            gap: 30px;
+
+
+            .ux-design {
+                position: absolute;
+                top: 90px;
+                right: 0;
+                width: 40%;
+                opacity: 0.3;
+                border-radius: 15px;
+                border: 0.5px solid $color-text-citation;
+            }
+
+
+
+
+            .expertise__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 80%;
+                margin-bottom: 95px;
+                gap: 20px;
+
+                h1 {
+                    margin: 0 0 45px 0;
+                    @include font-title($size: 40px, $weight: 600);
+                    color: $color-title-secondary;
+
+                }
+
+                .orange {
+                    color: $color-accent;
+                }
+
+                .text__intro {
+                    display: flex;
+                    max-width: 100%;
+                    padding: 10px 25px;
+                    z-index: 5;
+
+                    background-color: #0706199e;
+
+                    p {
+                        display: inline-block;
+                        max-width: 100%;
+                        @include font-text($size: 15px);
+                        color: $color-text-primary;
+                        margin-left: 15px;
+                        line-height: 25px;
+                    }
+                }
+
+                .text_absolute {
+                    display: flex;
+                    flex-direction: row;
+                    z-index: 5;
+                    display: flex;
+                    max-width: 100%;
+                    margin-left: 10%;
+                    border-left: 3px solid $color-accent;
+                    background-color: #0706199e;
+
+
+                    p {
+                        display: inline-block;
+                        max-width: 100%;
+                        color: $color-text-primary;
+                        @include font-text($size: 15px);
+
+                        margin-left: 15px;
+                        line-height: 25px;
+                    }
+
+
+                }
+            }
+
+            .expertise-grid {
+                position: relative;
+                max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 80px;
+
+
+                .expertise-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    min-height: 240px;
+                    width: 270px;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    border: 0.5px solid $color-accent;
+                    border-radius: 8px;
+                    z-index: 5;
+                    background-color: $background-section-secondary;
+
+
+                    a {
+                        display: inline-block;
+                        width: fit-content;
+                        margin-top: 15px;
+                        padding-right: 15px;
+                        min-height: 30px;
+                        text-decoration: none;
+                        transition: 0.25s ease;
+                        position: relative;
+                        @include font-text($size: 13px, $weight: 400);
+                        color: $color-accent;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            width: 0%;
+                            height: 2px;
+                            background: $color-accent;
+                            transition: width 0.3s ease;
+
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+
+                    .icon {
+                        display: none;
+                        //max-height: 25px;
+                    }
+
+                    h3 {
+                        display: inline-block;
+                        width: fit-content;
+                        @include font-title($size: 14px, $weight: 600);
+                        color: $color-utils;
+                        margin: 0 0 25px 0;
+                    }
+
+                    p {
+                        display: inline-block;
+                        width: fit-content;
+                        @include font-text($size: 13px, $weight: 400);
+                        color: $color-text-primary;
+                        margin: 0 0 15px 0;
+                    }
+
+
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        min-height: 45px;
+                        gap: 5px;
+                        padding: 0;
+                        margin: 10px 0;
+
+                        li {
+                            display: inline-block;
+                            background-color: $maquette-card-secondary;
+                            width: fit-content;
+                            height: fit-content;
+                            padding: 3px 6px;
+                            margin: 4px 0 0;
+                            @include font-text($size: 9px);
+                            color: $color-text-tertiary;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+        .container__expertise {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 50px 0;
+            background: linear-gradient(135deg, rgb(13, 0, 19), rgb(12, 0, 26));
+            border-top: 0.2px solid grey;
+            z-index: 5;
+
+            .img_black-hole {
+                z-index: 0;
+                position: absolute;
+                height: 100%;
+                filter: opacity(0.1) invert(0.3);
+            }
+
+            h2 {
+                display: inline-block;
+                width: 75%;
+                text-align: left;
+                margin-bottom: 25px;
+                color: $color-title-secondary;
+                @include font-title($size: 34px);
+            }
+
+
+        }
+
+        /* Sections détaillées */
+        .expertise-detail {
+            width: 75%;
+            height: fit-content;
+            padding: 15px;
+            margin: 25px 0;
+            box-sizing: border-box;
+            color: $color-text-secondary;
+
+
+
+
+            h3 {
+                text-align: left;
+                margin: 15px 0 25px;
+                @include font-title($size: 24px);
+
+            }
+
+            p {
+                line-height: 23px;
+                @include font-text($size: 13px);
+
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 789px) {
+    .expertise {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background-section;
+        overflow: hidden;
+        position: relative;
+        padding-top: 60px;
+
+
+        .expertise__head {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 100%;
+            margin-top: 30px;
+            padding: 0 10px;
+            gap: 30px;
+
+
+            .ux-design {
+                position: absolute;
+                top: 510px;
+                right: 50%;
+                transform: translateX(50%);
+                width: 90%;
+                opacity: 0.6;
+                border-radius: 15px;
+                border: 0.5px solid $color-text-citation;
+            }
+
+
+
+
+            .expertise__title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                max-width: 100%;
+                margin-bottom: 195px;
+                gap: 20px;
+
+                h1 {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                    @include font-title($size: 25px, $weight: 600);
+                    color: $color-title-secondary;
+
+                }
+
+                .orange {
+                    display: flex;
+                    color: $color-accent;
+                }
+
+                .text__intro {
+                    display: flex;
+                    max-width: 95%;
+                    z-index: 5;
+                    background-color: #0706199e;
+
+                    p {
+                        display: inline-block;
+                        max-width: 100%;
+                        @include font-text($size: 13px);
+                        color: $color-text-primary;
+                        line-height: 18px;
+                    }
+                }
+
+                .text_absolute {
+                    display: flex;
+                    flex-direction: row;
+                    z-index: 5;
+                    display: flex;
+                    max-width: 100%;
+                    margin-left: 5%;
+                    border-left: 3px solid $color-accent;
+                    background-color: #0706199e;
+
+
+                    p {
+                        display: inline-block;
+                        max-width: 100%;
+                        color: $color-text-primary;
+                        @include font-text($size: 13px);
+                        line-height: 18px;
+                        margin-left: 15px;
+                    }
+
+
+                }
+            }
+
+            .expertise-grid {
+                position: relative;
+                max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 80px;
+
+
+                .expertise-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    min-height: 240px;
+                    width: 270px;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    border: 0.5px solid $color-accent;
+                    border-radius: 8px;
+                    z-index: 5;
+                    background-color: $background-section-secondary;
+
+
+                    a {
+                        display: inline-block;
+                        width: fit-content;
+                        margin-top: 15px;
+                        padding-right: 15px;
+                        min-height: 30px;
+                        text-decoration: none;
+                        transition: 0.25s ease;
+                        position: relative;
+                        @include font-text($size: 13px, $weight: 400);
+                        color: $color-accent;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            width: 0%;
+                            height: 2px;
+                            background: $color-accent;
+                            transition: width 0.3s ease;
+
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+
+                    .icon {
+                        display: none;
+                        //max-height: 25px;
+                    }
+
+                    h3 {
+                        display: inline-block;
+                        width: fit-content;
+                        @include font-title($size: 14px, $weight: 600);
+                        color: $color-utils;
+                        margin: 0 0 25px 0;
+                    }
+
+                    p {
+                        display: inline-block;
+                        width: fit-content;
+                        @include font-text($size: 13px, $weight: 400);
+                        color: $color-text-primary;
+                        margin: 0 0 15px 0;
+                    }
+
+
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        min-height: 45px;
+                        gap: 5px;
+                        padding: 0;
+                        margin: 10px 0;
+
+                        li {
+                            display: inline-block;
+                            background-color: $maquette-card-secondary;
+                            width: fit-content;
+                            height: fit-content;
+                            padding: 3px 6px;
+                            margin: 4px 0 0;
+                            @include font-text($size: 9px);
+                            color: $color-text-tertiary;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+        .container__expertise {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 50px 0;
+            background: linear-gradient(135deg, rgb(13, 0, 19), rgb(12, 0, 26));
+            border-top: 0.2px solid grey;
+            z-index: 5;
+
+            .img_black-hole {
+                z-index: 0;
+                position: absolute;
+                height: 100%;
+                filter: opacity(0.1) invert(0.3);
+            }
+
+            h2 {
+                display: inline-block;
+                width: 75%;
+                text-align: left;
+                margin-bottom: 25px;
+                color: $color-title-secondary;
+                @include font-title($size: 24px);
+            }
+
+
+        }
+
+        /* Sections détaillées */
+        .expertise-detail {
+            width: 90%;
+            height: fit-content;
+            padding: 15px;
+            margin: 25px 0;
+            box-sizing: border-box;
+            color: $color-text-secondary;
+
+
+
+
+            h3 {
+                text-align: left;
+                margin: 15px 0 25px;
+                @include font-title($size: 18px);
+
+            }
+
+            p {
+                line-height: 23px;
+                @include font-text($size: 13px);
+
+            }
+        }
+
+    }
+}

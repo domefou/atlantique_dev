@@ -1,0 +1,206 @@
+@use "../mixin/bis_mixin.scss" as *;
+
+@media(min-width:789px) {
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        justify-self: center;
+        width: 65%;
+        margin: 15px 0;
+        background-color: $background-section-secondary;
+        border: 0.5px solid rgb(61, 61, 61);
+
+
+        .accordion-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            min-height: 45px;
+            border: none;
+            padding: 0 35px;
+            background-color: $background-hero-list;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            color: $color-accent;
+            @include font-text($size: 13px, $weight: 400);
+
+            &:hover {
+                background-color: rgb(46, 46, 46);
+                cursor: pointer;
+
+            }
+
+            .accordion-icon {
+                height: 25px;
+                background-color: rgb(216, 216, 216);
+                padding: 5px;
+                border-radius: 30px;
+                border: 0.5px solid rgb(255, 255, 255);
+                transition: transform 0.25s ease;
+                filter: invert(1) drop-shadow(0 0 1px white);
+            }
+
+            .accordion-icon.open {
+                transform: rotate(180deg);
+            }
+
+
+        }
+
+        .accordion-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-5px);
+            transition:
+                max-height 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+                opacity 0.3s ease,
+                transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+
+            p {
+                display: inline-block;
+                text-align: justify;
+                width: 80%;
+                color: $color-text-primary;
+                @include font-text($size: 13px, $weight: 100);
+            }
+
+            ul {
+                width: 80%;
+                margin-left: 45px;
+
+                li {
+                    margin: 5px 0;
+                    color: $color-accent-secondary;
+                    @include font-text($size: 13px, $weight: 100);
+                }
+            }
+        }
+
+        .accordion-content.open {
+            max-height: 1200px;
+            /* assez grand pour contenir ton texte */
+            opacity: 1;
+            transform: translateY(0);
+            padding: 25px 0;
+        }
+
+    }
+}
+
+
+@media(max-width:789px) {
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        justify-self: center;
+        width: 94%;
+        margin: 12px 0;
+        background-color: $background-section-secondary;
+        border: 0.5px solid rgb(61, 61, 61);
+
+
+        .accordion-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            min-height: 50px;
+            border: none;
+            padding: 5px 15px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            text-align: left;
+
+            background-color: $background-hero-list;
+            color: $color-accent;
+            @include font-text($size: 13px, $weight: 400);
+
+            &:hover {
+                background-color: rgb(76, 76, 76);
+                cursor: pointer;
+
+            }
+
+
+            .accordion-icon {
+                height: 15px;
+                background-color: rgb(216, 216, 216);
+                padding: 4px;
+                margin-left: 10px;
+                border-radius: 30px;
+                border: 0.5px solid rgb(255, 255, 255);
+                transition: transform 0.25s ease;
+                filter: invert(1) drop-shadow(0 0 1px white);
+            }
+
+            .accordion-icon.open {
+                transform: rotate(180deg);
+            }
+
+
+        }
+
+        .accordion-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-5px);
+            transition:
+                max-height 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+                opacity 0.3s ease,
+                transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+
+            p {
+                display: inline-block;
+                text-align: justify;
+                width: 80%;
+                color: $color-text-primary;
+                @include font-text($size: 13px, $weight: 100);
+            }
+
+            ul {
+                width: 80%;
+
+                li {
+
+                    margin: 5px 0;
+                    padding-left: 5px;
+                    text-align: left;
+                    color: $color-accent-secondary;
+                    @include font-text($size: 13px, $weight: 100);
+                }
+            }
+        }
+
+        .accordion-content.open {
+            max-height: 1500px;
+            /* assez grand pour contenir ton texte */
+            opacity: 1;
+            transform: translateY(0);
+            padding: 25px 0;
+        }
+
+    }
+}

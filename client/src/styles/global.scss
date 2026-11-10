@@ -1,0 +1,77 @@
+@use "./mixin/mixin.scss" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    //@include main-style;
+}
+
+
+.accueil,
+.estimation,
+.expertise,
+.contact {
+    position: relative;
+}
+
+
+
+
+.cursor {
+    display: inline-block;
+    width: 0.8rem;
+    /* largeur du curseur */
+    color: #ffffff;
+    /* vert phosphore terminal */
+    animation: blink 0.8s steps(1) infinite;
+
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(6px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out, filter 0.7s ease-out;
+}
+
+.reveal_right {
+    opacity: 0;
+    transform: translateX(150px);
+    filter: blur(6px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out, filter 0.7s ease-out;
+}
+
+.reveal_left {
+    opacity: 0;
+    transform: translateX(-150px);
+    filter: blur(6px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out, filter 0.7s ease-out;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+
+html {
+    background: rgb(31, 0, 37);
+}
+
+body {
+    background: black;
+}
+
+.navbar {
+    background: green;
+}
