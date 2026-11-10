@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
     console.log("Body reçu :", req.body);
 
     // Honeypot
-    if (req.body.contact_reference) {
+    if (req.body.website_url_8472) {
         return res.status(400).json({
             message: "Spam détecté",
         });

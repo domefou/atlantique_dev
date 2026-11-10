@@ -49,7 +49,7 @@ export default function Contact() {
             mail: formData.get("email"),
             objet: formData.get("classification"),
             message: formData.get("message"),
-            contact_reference: formData.get("contact_reference"),
+            website_url_8472: formData.get("website_url_8472"),
             formStart: formData.get("formStart"),
         };
 
@@ -176,9 +176,9 @@ export default function Contact() {
 
                         <input
                             type="text"
-                            name="contact_reference"
+                            name="website_url_8472"
                             tabIndex="-1"
-                            autoComplete="off"
+                            autoComplete="new-password"
                             aria-hidden="true"
                             style={{
                                 position: "absolute",
