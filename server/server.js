@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 // CORS
-
+/*
 const allowedOrigins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
@@ -38,10 +38,18 @@ const corsOptions = {
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
+
 };
 
 app.use(cors(corsOptions));
+*/
+app.use((req, res, next) => {
+    console.log(req.method, req.path, req.headers.origin);
+    next();
+});
 
+
+app.use(cors());
 
 /*
  * Stripe webhook DOIT être avant express.json()
