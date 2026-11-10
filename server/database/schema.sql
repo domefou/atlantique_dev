@@ -2,7 +2,7 @@
 /*  LOCAL */
 -- Création de la base
 
-DROP DATABASE atlantiqueDev;
+-- Création de l’utilisateur  DROP DATABASE atlantiqueDev;;
 
 CREATE DATABASE IF NOT EXISTS `atlantiqueDev` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
