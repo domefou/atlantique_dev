@@ -26,6 +26,7 @@
                 @include font-text($size: 15px);
                 color: $items-orange;
                 line-height: 25px;
+                margin: auto 0;
             }
 
             @keyframes textFade {
@@ -68,6 +69,7 @@
                 h3 {
                     @include font-text($size: 15px);
                     color: $color-text-primary;
+                    margin: auto 0 15px;
                 }
 
 
@@ -156,7 +158,8 @@
                 max-width: 90%;
                 width: fit-content;
                 animation: textFade 0.25s ease;
-                text-align: left;
+                text-align: center;
+                margin: auto 0;
 
                 @include font-text($size: 15px);
                 color: $items-orange;
@@ -204,6 +207,7 @@
                 h3 {
                     @include font-text($size: 13px);
                     color: $color-text-primary;
+                    margin: auto 0 15px;
                 }
 
 

@@ -172,12 +172,11 @@
 
                             &:first-child {
 
-                                background-color: #0d73d2;
+                                background-color: #73779c;
 
                                 .orange {
                                     @include font-title($size: 28px);
                                     color: $color-accent;
-                                    text-shadow: 0 0 6px black;
                                 }
 
                                 ul {
@@ -203,12 +202,11 @@
 
                             &:last-child {
 
-                                background-color: #1e911c;
+                                background-color: #5b8469;
 
                                 .orange {
                                     @include font-title($size: 28px);
                                     color: $color-accent;
-                                    text-shadow: 0 0 6px black;
                                 }
 
                                 ul {
@@ -277,7 +275,7 @@
                         max-width: 70%;
                         text-align: left;
                         @include font-text($size: 45px, $weight: 600);
-                        color: $color-accent;
+                        color: $color-accent-secondary;
                         text-shadow: 0 0 6px rgb(0, 0, 0);
                     }
 
@@ -465,7 +463,8 @@
 
                     ul {
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
+                        flex-wrap: wrap;
                         justify-content: center;
                         flex-wrap: wrap;
                         max-width: 100%;
@@ -476,6 +475,7 @@
                             display: inline-block;
                             list-style: none;
                             max-width: 100%;
+                            width: fit-content;
                             padding-left: 20px;
                             margin: 10px 0;
 
@@ -563,12 +563,11 @@
 
                             &:first-child {
 
-                                background-color: #0d73d2;
+                                background-color: #73779c;
 
                                 .orange {
                                     @include font-title($size: 22px);
                                     color: $color-accent;
-                                    text-shadow: 0 0 6px black;
                                 }
 
                                 ul {
@@ -594,12 +593,11 @@
 
                             &:last-child {
 
-                                background-color: #1e911c;
+                                background-color: #5b8469;
 
                                 .orange {
                                     @include font-title($size: 22px);
                                     color: $color-accent;
-                                    text-shadow: 0 0 6px black;
                                 }
 
                                 ul {
@@ -664,7 +662,7 @@
                         max-width: 100%;
                         text-align: left;
                         @include font-text($size: 30px, $weight: 600);
-                        color: $color-accent;
+                        color: $color-accent-secondary;
                         text-shadow: 0 0 6px rgb(0, 0, 0);
                     }
 
@@ -694,6 +692,11 @@
                         width: 100%;
                         gap: 25px;
                         padding: 20px;
+
+                        scrollbar-width: none;
+                        /* Firefox */
+                        -ms-overflow-style: none;
+                        /* IE/ancien Edge */
                     }
 
                 }

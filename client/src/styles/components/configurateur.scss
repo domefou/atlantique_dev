@@ -246,7 +246,7 @@
                     width: 100%;
                     @include font-text($size: 17px, $weight: 600);
                     margin: 0;
-                    color: $color-accent;
+                    color: $color-accent-secondary;
                 }
 
                 .scope__header {
@@ -730,7 +730,7 @@
             justify-items: center;
             max-width: 100%;
             padding: 10px;
-            background: linear-gradient(135deg, rgb(16, 16, 16), rgb(8, 8, 8));
+            background: linear-gradient(135deg, rgb(13, 13, 13), rgb(23, 23, 23));
             border: 0.5px solid rgb(175, 175, 175);
 
 
@@ -744,7 +744,7 @@
                     @include font-text($size: 14px, $weight: 600);
                     margin: 0;
                     width: 100%;
-                    color: $color-accent;
+                    color: $color-accent-secondary;
                 }
 
                 .scope__header {

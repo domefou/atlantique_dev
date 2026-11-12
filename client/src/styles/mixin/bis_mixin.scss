@@ -68,7 +68,8 @@ $color-text-primary: #BABABA;
 $color-text-secondary: #CBC3D7;
 $color-text-tertiary: #DFE2EF;
 $color-text-citation: #b58ecf;
-$color-text-exception: #005564;
+//$color-text-exception: #005564;
+$color-text-exception: #007387;
 $color-text-form: #969171;
 
 
@@ -76,10 +77,16 @@ $color-text-form: #969171;
 $color-text-exeption: #8E8E8E;
 $cookie-text: #374151;
 
-$color-accent: #F6B24C;
+//$color-accent: #F6B24C;
 $color-utils: #4c330c;
-$color-accent_hover: #f6d74c;
-$color-accent-secondary: #5295eb;
+
+//$color-accent_hover: #f6d74c;
+
+
+
+//$color-accent-secondary: #5295eb;
+$color-accent-primary: #5295eb;
+$color-accent-secondary: #F6B24C;
 $color-accent-tertiary: #D775EF;
 
 
@@ -103,12 +110,14 @@ $bubble-hero: #0095FF;
 $card-hero: #101219;
 
 //section definir un projet
+/*
 $orange-card: #0D0907;
 $orange-card-secondary: #160D0D; //cta orange sombre
 $orange-card-secondary_hover: #392a13; //cta orange hover
 $orange-card-tertiary: #362408;
 $orange-card-quaternary: #191123 to #000000;
 $items-orange: #F6B24C;
+*/
 
 //section maquette
 $maquette-card: #0d0d11;
@@ -125,3 +134,21 @@ $freelance-smooth-card: #181B25;
 //section suivre un projet
 $project-card: #1C1F29;
 $project-card-secondary: rgba(10, 14, 23, 0.4);
+
+
+
+/***************************************************/
+
+
+$color-accent: #812cd6;
+
+
+//section definir un projet
+$orange-card: #0d0c17;
+$orange-card-secondary: #13141f; //cta orange sombre
+$orange-card-secondary_hover: #131739; //cta orange hover
+$orange-card-tertiary: #080936;
+$orange-card-quaternary: #191123 to #000000;
+$items-orange: #812cd6;
+
+$color-accent_hover: #8b40d6;

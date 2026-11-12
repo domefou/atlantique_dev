@@ -40,8 +40,8 @@
                 gap: 1rem;
 
                 img {
-                    height: 50px;
-                    width: 50px;
+                    height: 40px;
+                    width: auto;
                     object-fit: contain;
                 }
 
@@ -170,21 +170,21 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: center;
-                margin-right: auto;
+                justify-content: flex-end;
                 margin-left: 10px;
+                width: fill;
 
                 img {
                     height: 30px;
-                    width: 30px;
+                    width: auto;
                     object-fit: contain;
-                    margin-right: 25px;
+                    margin-right: 50px;
                 }
 
                 p {
                     display: block;
-                    margin: 0;
-                    @include font-text();
+                    margin: 0 auto;
+                    @include font-text($size: 11px);
                     color: $color-text-secondary;
                     text-align: center;
                 }

@@ -34,8 +34,8 @@ export default function Navbar() {
                     {/* LOGO */}
                     <div className="navbar__logo">
 
-                        <Link className="item_link" to="/"><img src="/assets/logo/logo_navBar.png" alt="Logo Atlantique Dev" /></Link>
-                        <p>Atlantique Dev</p>
+                        <Link className="item_link" to="/"><img src="/assets/logo/new_logo_grey.png" alt="Logo Atlantique Dev" /></Link>
+                        <p>Création Web Original</p>
                     </div>
 
                     {/* NAVIGATION DESKTOP */}

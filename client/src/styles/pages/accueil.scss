@@ -120,17 +120,16 @@
 
                         img {
                             height: 15px;
-                            filter: saturate(2.3);
                         }
 
                         &:hover {
                             cursor: pointer;
-                            border: 1px solid $color-accent-secondary;
+                            border: 1px solid $color-accent-primary;
                             color: $color-title;
 
                             img {
 
-                                filter: saturate(1) invert(1);
+                                filter: hue-rotate(300deg);
                             }
                         }
                     }
@@ -786,7 +785,7 @@
 
                     .atlantique-bubble {
                         position: absolute;
-                        background-color: $color-accent;
+                        background-color: $color-accent-secondary;
                         height: 20px;
                         right: 35px;
                         top: -10px;
@@ -1428,17 +1427,15 @@
 
                         img {
                             height: 15px;
-                            filter: saturate(2.3);
                         }
 
                         &:hover {
                             cursor: pointer;
-                            border: 1px solid $color-accent-secondary;
+                            border: 1px solid $color-accent-primary;
                             color: $color-title;
 
                             img {
-
-                                filter: saturate(1) invert(1);
+                                filter: hue-rotate(300deg);
                             }
                         }
                     }
@@ -2119,7 +2116,7 @@
 
                     .atlantique-bubble {
                         position: absolute;
-                        background-color: $color-accent;
+                        background-color: $color-accent-secondary;
                         height: 20px;
                         right: 35px;
                         top: -10px;

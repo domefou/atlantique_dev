@@ -60,7 +60,7 @@ function Accueil() {
 
                     <div className="CTA-hero">
                         <div className="CTA-hero__container">
-                            <Link className="btn-primary" to="/estimation">Estimer mon projet gratuitement <img src="/assets/icons/new_icon/orange/arrows-Toright.webp" alt="fleche orange direction droite"></img> </Link>
+                            <Link className="btn-primary" to="/estimation">Estimer mon projet gratuitement <img src="/assets/icons/new_icon/orange/arrows-Toright_purple.webp" alt="fleche orange direction droite"></img> </Link>
                             <Link className="btn-secondary" to="/contact">Me contacter</Link>
                         </div>
                     </div>

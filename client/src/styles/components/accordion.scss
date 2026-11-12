@@ -25,7 +25,7 @@
             padding: 0 35px;
             background-color: $background-hero-list;
             border-bottom: 1px solid rgba(0, 255, 255, 0.1);
-            color: $color-accent;
+            color: $color-title-tertiary;
             @include font-text($size: 13px, $weight: 400);
 
             &:hover {
@@ -127,7 +127,7 @@
             text-align: left;
 
             background-color: $background-hero-list;
-            color: $color-accent;
+            color: $color-title-tertiary;
             @include font-text($size: 13px, $weight: 400);
 
             &:hover {

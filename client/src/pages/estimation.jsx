@@ -162,9 +162,6 @@ export default function Estimation() {
                                     Hébergement Hostinger 1 an
                                 </li>
                                 <li>
-                                    Maintenance essentiel 1 an
-                                </li>
-                                <li>
                                     Sécurité SSL
                                 </li>
                             </ul>

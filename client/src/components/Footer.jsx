@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
 
@@ -13,10 +15,19 @@ export default function Footer() {
 
                 <div className="footer__column">
                     <ul>
-                        <li><a className="footer__link" href="#">GitHub</a></li>
-                        <li><a className="footer__link" href="#">LinkedIn</a></li>
-                        <li><a className="footer__link" href="#">Twitter</a></li>
-                        <li><a className="footer__link" href="#">Email</a></li>
+                        <li>
+                            <a
+                                className="footer__link"
+                                href="https://github.com/domefou"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                        </li>
+                        <li><a className="footer__link" target="_blank" to="#">Fiche Google</a></li>
+                        <li><Link className="footer__link" to="/politique-confidentialite">Politique de confidentialité</Link></li>
+                        <li><Link className="footer__link" to="/politique-confidentialite">Conditions générales d'utilisation</Link></li>
                     </ul>
                 </div>
 

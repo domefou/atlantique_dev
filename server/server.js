@@ -121,9 +121,9 @@ app.use("/stripe", stripeRoutes);
 
 
 // Front fallback
-// app.use((req, res) => {
-//     res.sendFile(path.join(__dirname, "client/dist", "index.html"));
-// });
+app.use((req, res) => {
+    res.sendFile(path.join(__dirname, "client/dist", "index.html"));
+});
 
 // Test
 app.get("/", (req, res) => {
