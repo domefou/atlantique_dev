@@ -140,6 +140,15 @@ export default function Configurateur() {
             return;
         }
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(mail)) {
+            return res.status(400).json({
+                success: false,
+                message: "Adresse email invalide"
+            });
+        }
+
         const payload = {
             emailClient: email,
             acceptCGU,

@@ -28,6 +28,22 @@ router.post("/", async (req, res) => {
 
     const { nom, objet, mail, message } = req.body;
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(mail)) {
+        return res.status(400).json({
+            success: false,
+            message: "Adresse email invalide"
+        });
+    }
+
+    if (!nom || !mail || !objet || !message) {
+        return res.status(400).json({
+            success: false,
+            message: "Tous les champs sont obligatoires"
+        });
+    }
+
     try {
         await contactMail({ nom, objet, mail, message });
 
