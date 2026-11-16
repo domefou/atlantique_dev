@@ -1,5 +1,7 @@
 import "../styles/components/devisTemplate.scss";
 
+import logoBlack from "/assets/logo/new_logo_black.png";
+
 export default function DevisTemplate({ emailClient, architecture, database, wordpress, maintenance, options, total }) {
 
     const today = new Date().toLocaleDateString("fr-FR");
@@ -10,7 +12,7 @@ export default function DevisTemplate({ emailClient, architecture, database, wor
             <section className="devis_header">
                 <div className="left">
 
-                    <img src="/assets/logo/new_logo_black.png" alt="Logo" className="logo" />
+                    <img src={logoBlack} alt="Logo" className="logo" />
                     <h2>Atlantique dev / Freelance Concepteur Web</h2>
                     <p><strong>SIRET :</strong> 100 839 190 00012</p>
                     <p><strong>Email :</strong> contact@atlantiquedev.fr</p>
