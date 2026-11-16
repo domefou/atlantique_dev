@@ -76,10 +76,10 @@ export default function Estimation() {
                                 <div className="maintenance__content">
                                     <ul>
                                         <p>Maintenance <span className="grey">Essentielle</span></p>
-                                        <li>- Mises à jour CMS -</li>
-                                        <li>- Mises à jour extensions -</li>
-                                        <li>- Correctifs de sécurité -</li>
-                                        <li>- Vérification du bon fonctionnement -</li>
+                                        <li>Mises à jour CMS</li>
+                                        <li>Mises à jour extensions</li>
+                                        <li>Correctifs de sécurité</li>
+                                        <li>Vérification du bon fonctionnement</li>
                                     </ul>
 
                                 </div>
@@ -88,10 +88,10 @@ export default function Estimation() {
 
                                     <ul>
                                         <p>Maintenance <span className="grey">Standart</span></p>
-                                        <li>- Tout le contenu de l'offre Essentielle -</li>
-                                        <li>- Assistance prioritaire -</li>
-                                        <li>- Petites interventions techniques incluses -</li>
-                                        <li>- Accompagnement en cas de problème -</li>
+                                        <li>Tout le contenu de l'offre Essentielle</li>
+                                        <li>Assistance prioritaire</li>
+                                        <li>Petites interventions techniques incluses</li>
+                                        <li>Accompagnement en cas de problème</li>
                                     </ul>
                                 </div>
 

@@ -170,14 +170,12 @@
                         .maintenance__content {
                             width: 30%;
                             min-width: 385px;
-                            padding: 15px;
+                            padding: 5px;
                             background-color: $background-section-secondary;
-                            box-shadow: 1px 2px 2px 1px rgb(24, 24, 24);
 
                             &:first-child {
+                                background: $orange-card;
 
-
-                                background-color: #2f4855;
 
                                 .grey {
                                     @include font-title($size: 32px, $weight: 800);
@@ -189,8 +187,8 @@
                                 }
 
                                 ul {
-                                    background-color: #436271;
-                                    box-shadow: inset 0.5px 1px 1.5px 2px rgb(33, 33, 33);
+                                    background-color: $orange-card-quaternary;
+                                    border: 0.5px solid $orange-card-tertiary;
 
                                     p {
                                         display: flex;
@@ -199,16 +197,16 @@
                                         text-align: left;
 
                                         @include font-text($size: 20px, $weight: 800);
-                                        color: rgb(24, 24, 24);
+                                        color: #e7e5ff;
                                     }
 
                                     li {
                                         @include font-text($size: 13px, $weight: 600);
                                         //color: rgb(29, 29, 29);
-                                        color: $color-text-tertiary;
+                                        color: $color-text-primary;
                                         min-height: 22px;
                                         line-height: 22px;
-                                        background-image: url('/assets/icons/new_icon/settings.webp');
+                                        background-image: url('/assets/icons/new_icon/orange/simple_check.webp');
                                         background-repeat: no-repeat;
                                         background-size: 22px 22px;
                                         background-position: left 0;
@@ -219,7 +217,7 @@
                             &:last-child {
 
 
-                                background-color: #2e3852;
+                                background: $orange-card;
 
                                 .grey {
                                     @include font-title($size: 32px, $weight: 800);
@@ -231,8 +229,8 @@
                                 }
 
                                 ul {
-                                    background-color: #434f71;
-                                    box-shadow: inset 0.5px 1px 1.5px 2px rgb(33, 33, 33);
+                                    background-color: $orange-card-secondary;
+                                    border: 0.5px solid $color-accent;
 
                                     p {
                                         display: flex;
@@ -241,16 +239,16 @@
                                         text-align: left;
 
                                         @include font-text($size: 20px, $weight: 800);
-                                        color: rgb(24, 24, 24);
+                                        color: #e7e5ff;
                                     }
 
                                     li {
                                         @include font-text($size: 13px, $weight: 600);
                                         //color: rgb(29, 29, 29);
-                                        color: $color-text-tertiary;
+                                        color: $color-text-primary;
                                         min-height: 22px;
                                         line-height: 22px;
-                                        background-image: url('/assets/icons/new_icon/settings.webp');
+                                        background-image: url('/assets/icons/new_icon/orange/simple_check.webp');
                                         background-repeat: no-repeat;
                                         background-size: 22px 22px;
                                         background-position: left 0;
@@ -302,7 +300,7 @@
 
                     .offert {
                         display: inline-block;
-                        max-width: 70%;
+                        width: 70%;
                         text-align: left;
                         @include font-text($size: 40px, $weight: 600);
                         color: $color-accent-secondary;
@@ -310,7 +308,7 @@
 
                         .Hostinger {
                             @include font-text($size: 50px, $weight: 800);
-                            color: $color-text-primary;
+                            color: $color-accent;
                             text-shadow: 0 0 6px rgb(0, 0, 0);
                         }
                     }
@@ -348,8 +346,9 @@
                     justify-content: center;
                     align-items: center;
                     z-index: 10;
-                    width: 90%;
+                    width: 70%;
                     margin: 65px 0;
+                    padding: 10px;
 
 
 
@@ -376,20 +375,20 @@
                         flex-wrap: wrap;
                         align-items: center;
                         justify-content: space-around;
-                        width: 90%;
+                        width: 70%;
                         margin: 35px 0 0 0;
                         padding: 25px;
-                        border: 0.5px solid black;
                         border-radius: 5px;
                         list-style-position: inside;
+                        border: 0.5px solid $color-accent;
+                        border-radius: 8px;
 
 
 
                         li {
                             list-style-type: "✔ ";
-                            width: fit-content;
                             text-align: left;
-                            padding-left: 30px;
+                            margin-top: 8px;
                             @include font-text($size: 15px);
                             color: $color-text-primary;
                         }
@@ -597,37 +596,38 @@
 
                             &:first-child {
 
+                                background: $orange-card;
 
-                                background-color: #2f4855;
 
                                 .grey {
-                                    @include font-title($size: 22px);
-                                    margin-left: 25px;
+                                    @include font-title($size: 22px, $weight: 400);
+                                    margin-top: 10px;
                                     color: $color-accent;
+                                    text-align: center;
                                     text-shadow: 1px 2px 1px black;
                                 }
 
                                 ul {
+                                    background-color: $orange-card-quaternary;
+                                    border: 0.5px solid $orange-card-tertiary;
 
-                                    background-color: #436271;
-                                    box-shadow: inset 1px 2px 2px 1px rgb(50, 50, 50);
 
                                     p {
                                         display: flex;
                                         max-width: 100%;
                                         flex-direction: column;
                                         text-align: left;
-                                        @include font-text($size: 15px, $weight: 800);
-                                        color: rgb(29, 29, 29);
+                                        @include font-text($size: 9px, $weight: 800);
+                                        color: #e7e5ff;
                                         margin: 0 0 20px 0;
                                     }
 
                                     li {
-                                        @include font-text($size: 13px, $weight: 600);
-                                        color: $color-text-tertiary;
+                                        @include font-text($size: 11px, $weight: 500);
+                                        color: $color-text-primary;
                                         min-height: 25px;
                                         line-height: 15px;
-                                        background-image: url('/assets/icons/new_icon/settings.webp');
+                                        background-image: url('/assets/icons/new_icon/orange/simple_check.webp');
                                         background-repeat: no-repeat;
                                         background-size: 15px 15px;
                                         background-position: left 0;
@@ -637,18 +637,20 @@
 
                             &:last-child {
 
-                                background-color: #2e3852;
+                                background: $orange-card;
+
 
                                 .grey {
-                                    @include font-title($size: 22px);
-                                    margin-left: 25px;
+                                    @include font-title($size: 22px, $weight: 400);
+                                    margin-top: 10px;
                                     color: $color-accent;
+                                    text-align: center;
                                     text-shadow: 1px 2px 1px black;
                                 }
 
                                 ul {
-                                    background-color: #434f71;
-                                    box-shadow: inset 1px 2px 2px 1px rgb(50, 50, 50);
+                                    background-color: $orange-card-secondary;
+                                    border: 0.5px solid $color-accent;
 
 
                                     p {
@@ -656,17 +658,17 @@
                                         max-width: 100%;
                                         flex-direction: column;
                                         text-align: left;
-                                        @include font-text($size: 15px, $weight: 800);
-                                        color: rgb(29, 29, 29);
+                                        @include font-text($size: 9px, $weight: 800);
+                                        color: #e7e5ff;
                                         margin: 0 0 20px 0;
                                     }
 
                                     li {
-                                        @include font-text($size: 13px, $weight: 600);
-                                        color: $color-text-tertiary;
+                                        @include font-text($size: 11px, $weight: 500);
+                                        color: $color-text-primary;
                                         min-height: 25px;
                                         line-height: 15px;
-                                        background-image: url('/assets/icons/new_icon/settings.webp');
+                                        background-image: url('/assets/icons/new_icon/orange/simple_check.webp');
                                         background-repeat: no-repeat;
                                         background-size: 15px 15px;
                                         background-position: left 0;
@@ -685,7 +687,7 @@
                                 li {
                                     margin: 10px 0;
                                     list-style: none;
-                                    padding-left: 20px;
+                                    padding-left: 28px;
                                 }
                             }
                         }
@@ -705,11 +707,11 @@
 
                         margin: 8px;
                         text-align: left;
-                        @include font-text($size: 15px);
+                        @include font-text($size: 14px);
                         color: $color-text-primary;
 
                         .bold {
-                            @include font-text($size: 18px, $weight: 600);
+                            @include font-text($size: 14px, $weight: 600);
                             color: $color-title;
                         }
                     }
@@ -719,13 +721,13 @@
                         max-width: 100%;
                         text-align: left;
                         margin: 8px;
-                        @include font-text($size: 22px, $weight: 600);
+                        @include font-text($size: 18px, $weight: 400);
                         color: $color-accent-secondary;
                         text-shadow: 0 0 6px rgb(0, 0, 0);
 
                         .Hostinger {
-                            @include font-text($size: 30px, $weight: 800);
-                            color: $color-text-primary;
+                            @include font-text($size: 20px, $weight: 800);
+                            color: $color-accent;
                             margin-right: 10px;
                             text-shadow: 0 0 6px rgb(0, 0, 0);
                         }
@@ -733,7 +735,7 @@
 
                     .underline {
                         color: $color-title;
-                        @include font-text($size: 18px, $weight: 600);
+                        @include font-text($size: 14px, $weight: 500);
                     }
                 }
 
@@ -804,6 +806,7 @@
                         border-radius: 5px;
                         background: $background-section;
                         list-style-position: inside;
+                        border: 0.5px solid $color-accent;
 
 
 
