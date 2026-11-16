@@ -246,7 +246,7 @@
                     width: 100%;
                     @include font-text($size: 17px, $weight: 600);
                     margin: 0;
-                    color: $color-accent-secondary;
+                    color: $color-accent;
                 }
 
                 .scope__header {
@@ -310,6 +310,7 @@
 
 
             .final_price {
+                text-align: right;
                 color: $color-text-primary;
                 @include font-text($size: 13px);
 
@@ -557,7 +558,7 @@
                         align-items: center;
                         gap: 15px;
                         padding: 10px;
-                        width: 90px;
+                        width: 105px;
                         min-height: 83px;
                         transition: 0.2s;
                         border-radius: 4px;
@@ -741,10 +742,11 @@
 
                 h4 {
                     display: inline-block;
-                    @include font-text($size: 14px, $weight: 600);
+                    text-align: right;
+                    @include font-text($size: 11px, $weight: 600);
                     margin: 0;
                     width: 100%;
-                    color: $color-accent-secondary;
+                    color: $color-accent;
                 }
 
                 .scope__header {
@@ -759,10 +761,12 @@
                         display: flex;
                         flex-direction: row;
                         max-width: 100%;
+                        margin: 0;
+                        @include font-text($size: 13px, $weight: 400);
+                        color: $color-text-primary;
                     }
 
-                    strong,
-                    .column {
+                    strong {
                         margin: 5px 0;
                         @include font-text($size: 13px, $weight: 400);
                         color: $color-text-primary;

@@ -212,7 +212,8 @@
 
 
 
-                &:hover {
+                &:hover,
+                &:focus {
                     cursor: default;
                     transform: translateY(0);
                     box-sizing: border-box;

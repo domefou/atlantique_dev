@@ -34,6 +34,7 @@ export default function Module() {
                         <Prestation
                             key={index}
                             className="prestation"
+                            tabIndex={0}
                             img={item.img}
                             title={item.title}
                             description={item.description}

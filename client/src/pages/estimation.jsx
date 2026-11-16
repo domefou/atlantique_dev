@@ -75,23 +75,23 @@ export default function Estimation() {
 
                                 <div className="maintenance__content">
                                     <ul>
-                                        <p>* Maintenance <span className="orange">Essentielle</span></p>
-                                        <li>Mises à jour CMS</li>
-                                        <li>Mises à jour extensions</li>
-                                        <li>Correctifs de sécurité</li>
-                                        <li>Vérification du bon fonctionnement</li>
+                                        <p>Maintenance <span className="grey">Essentielle</span></p>
+                                        <li>- Mises à jour CMS -</li>
+                                        <li>- Mises à jour extensions -</li>
+                                        <li>- Correctifs de sécurité -</li>
+                                        <li>- Vérification du bon fonctionnement -</li>
                                     </ul>
 
                                 </div>
-                                <p className="choix__text">OU</p>
+                                <p className="choix__text">Vous <br></br>Choisissez</p>
                                 <div className="maintenance__content">
 
                                     <ul>
-                                        <p>* Maintenance <span className="orange">Standart</span></p>
-                                        <li>Tout le contenu de l'offre Essentielle</li>
-                                        <li>Assistance prioritaire</li>
-                                        <li>Petites interventions techniques incluses</li>
-                                        <li>Accompagnement en cas de problème</li>
+                                        <p>Maintenance <span className="grey">Standart</span></p>
+                                        <li>- Tout le contenu de l'offre Essentielle -</li>
+                                        <li>- Assistance prioritaire -</li>
+                                        <li>- Petites interventions techniques incluses -</li>
+                                        <li>- Accompagnement en cas de problème -</li>
                                     </ul>
                                 </div>
 
@@ -102,7 +102,7 @@ export default function Estimation() {
                             </div>
 
 
-                            <p className="offert">Hébergement 1 an inclu !</p>
+                            <p className="offert">Hébergement <span className="Hostinger">HOSTINGER</span> 1 an inclu !</p>
                             <p className="hebergement__text"><span className="bold">L'hebergement </span>de votre site web est inclu pour une durée minimum d'un an d'une valeur de <span className="underline">99€ en moyenne</span>. Un renouvellement est possible.
                                 Si vous souhaitez heberger votre site chez un autre hebergeur je peux vous accompagner dans vos demarche.</p>
 

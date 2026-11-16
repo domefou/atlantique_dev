@@ -25,7 +25,7 @@ export default function Footer() {
                                 GitHub
                             </a>
                         </li>
-                        <li><a className="footer__link" target="_blank" to="#">Fiche Google</a></li>
+                        <li><a className="footer__link" target="_blank" href="https://www.google.com/search?q=Atlantique+Dev&stick=H4sIAAAAAAAA_-NgU1I1qDCxMDAxNDVNTDZNTUkySDK2MqhISjJPNU9NtjA0STU1S01NW8TK51iSk5hXkllYmqrgkloGAIdTZ1E6AAAA&hl=fr&mat=CeKPnuMW8dZYElcBzAmVZr6u6dWxUmMJyHbANjFUsr9cT1NVnSRxuFd7tA2SOYvq7z6pJt5Bhmlm6DeofJl1p9awXiYyYdYw45Q61ozg0WM3Cj5dZFlnN_YLJEWhd-e__18&authuser=0&ved=1t:350944">Fiche Google</a></li>
                         <li><Link className="footer__link" to="/politique-confidentialite">Politique de confidentialité</Link></li>
                         <li><Link className="footer__link" to="/politique-confidentialite">Conditions générales d'utilisation</Link></li>
                     </ul>

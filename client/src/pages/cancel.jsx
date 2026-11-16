@@ -30,7 +30,7 @@ function Cancel() {
 
                 <meta name="robots" content="noindex,nofollow" />
 
-                <link rel="canonical" href="https://atlantiquedev.fr/paiement/erreur" />
+                <link rel="canonical" href="https://atlantiquedev.fr/paiement/cancel" />
             </Helmet>
 
             <main className="paiement">
@@ -57,16 +57,17 @@ function Cancel() {
                             <p>
                                 <span className='error_paiement'>Une erreur est survenue.</span><br />
 
-                                Il semblerait que votre paiement est été refusé.
-                            </p>
-                            <p>
-                                Veuillez réessayer dans quelque minutes.
-                            </p>
-                            <p>
+                                Il semblerait que votre paiement est été refusé<br></br>
+                                Veuillez réessayer dans quelque minutes.<br></br>
                                 Si le problèmes perciste veuillez me contacter via la page
                             </p>
-                            <Link className="link_paiement" to="/contact"> Me contacter</Link>
-                            <Link className="link_paiement" to="/">Retourner a l'accueil</Link>
+
+                            <div className='CTA_cancel'>
+
+                                <Link className="link_paiement" to="/contact"> Me contacter</Link>
+                                <Link className="link_paiement" to="/">Retourner a l'accueil</Link>
+
+                            </div>
                         </div>
                     </article>
 

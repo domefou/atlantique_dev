@@ -120,6 +120,7 @@
 
                         img {
                             height: 15px;
+                            filter: hue-rotate(345deg);
                         }
 
                         &:hover {
@@ -129,7 +130,7 @@
 
                             img {
 
-                                filter: hue-rotate(300deg);
+                                filter: brightness(0.1) invert(1);
                             }
                         }
                     }
@@ -305,7 +306,7 @@
                         h3 {
                             border-radius: 15px 15px 0 0;
                             padding: 20px 25px 0 25px;
-                            margin: 5px 0;
+                            margin: 0 0 5px 0;
                             @include font-title($size: 18px);
                             color: $color-accent;
                             background-color: $orange-card-secondary;
@@ -334,11 +335,11 @@
 
                         img {
                             position: absolute;
-                            bottom: -25px;
+                            bottom: -35px;
                             left: 50%;
                             transform: translateX(-50%);
                             width: 70%;
-                            filter: drop-shadow(20px 20px 10px black) brightness(0.4);
+                            filter: drop-shadow(20px 20px 10px rgb(0, 0, 0)) brightness(0.8);
                         }
                     }
                 }
@@ -785,7 +786,7 @@
 
                     .atlantique-bubble {
                         position: absolute;
-                        background-color: $color-accent-secondary;
+                        background-color: $color-accent;
                         height: 20px;
                         right: 35px;
                         top: -10px;
@@ -1427,6 +1428,7 @@
 
                         img {
                             height: 15px;
+                            filter: hue-rotate(345deg);
                         }
 
                         &:hover {
@@ -1628,25 +1630,6 @@
                     }
 
                     .votre-projet__absolute {
-                        /*position: relative;
-                        width: 100%;
-                        min-width: 300px;
-                        min-height: 100px;
-                        border-radius: 15px;
-                        border: 1px solid rgb(66, 66, 66);
-                        background:
-                            radial-gradient(circle at center, #68442ea3 0%, #68442e1d 60%),
-                            #000;
-
-                        img {
-                            position: absolute;
-                            bottom: -25px;
-                            left: 70%;
-                            transform: translateX(-50%);
-                            width: 50%;
-                            filter: drop-shadow(20px 20px 10px rgb(0, 0, 0));
-                        }
-                            */
                         position: relative;
                         width: 100%;
                         min-width: 300px;
@@ -2116,7 +2099,7 @@
 
                     .atlantique-bubble {
                         position: absolute;
-                        background-color: $color-accent-secondary;
+                        background-color: $color-accent;
                         height: 20px;
                         right: 35px;
                         top: -10px;

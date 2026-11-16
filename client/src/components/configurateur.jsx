@@ -94,6 +94,19 @@ export default function Configurateur() {
 
         const doc = new jsPDF("p", "pt", "a4");
 
+        const images = document.querySelectorAll(".devis_template img");
+
+        await Promise.all(
+            [...images].map(img => {
+                if (img.complete) return Promise.resolve();
+
+                return new Promise(resolve => {
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+            })
+        );
+
         doc.html(document.querySelector(".devis_template"), {
             callback: (pdf) => pdf.save("devis.pdf"),
             x: 0,

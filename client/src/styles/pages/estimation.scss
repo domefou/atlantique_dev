@@ -14,6 +14,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             overflow: clip;
 
 
@@ -149,13 +150,16 @@
                     padding: 45px 0;
 
 
+
                     .maintenance__info {
                         display: flex;
                         flex-direction: row;
+                        flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
                         gap: 35px;
                         width: 100%;
+                        max-width: 100%;
                         margin-bottom: 45px;
                         padding: 45px 0;
                         background-color: $background-section;
@@ -165,36 +169,48 @@
 
                         .maintenance__content {
                             width: 30%;
-                            border: 1px solid $color-text-primary;
-                            border-radius: 8px;
-                            padding: 25px;
+                            min-width: 385px;
+                            padding: 15px;
                             background-color: $background-section-secondary;
+                            box-shadow: 1px 2px 2px 1px rgb(24, 24, 24);
 
                             &:first-child {
 
-                                background-color: #73779c;
 
-                                .orange {
-                                    @include font-title($size: 28px);
+                                background-color: #2f4855;
+
+                                .grey {
+                                    @include font-title($size: 32px, $weight: 800);
+                                    margin-left: 45px;
+                                    //color: rgb(175, 175, 175);
                                     color: $color-accent;
+
+                                    text-shadow: 1px 2px 1px black;
                                 }
 
                                 ul {
-                                    p {
+                                    background-color: #436271;
+                                    box-shadow: inset 0.5px 1px 1.5px 2px rgb(33, 33, 33);
 
-                                        @include font-text($size: 22px, $weight: 800);
-                                        color: black;
+                                    p {
+                                        display: flex;
+                                        max-width: 100%;
+                                        flex-direction: column;
+                                        text-align: left;
+
+                                        @include font-text($size: 20px, $weight: 800);
+                                        color: rgb(24, 24, 24);
                                     }
 
                                     li {
-                                        @include font-text($size: 15px, $weight: 600);
-
-                                        color: $color-text-secondary;
-                                        text-shadow: 0 0 6px black;
-                                        min-height: 30px;
+                                        @include font-text($size: 13px, $weight: 600);
+                                        //color: rgb(29, 29, 29);
+                                        color: $color-text-tertiary;
+                                        min-height: 22px;
+                                        line-height: 22px;
                                         background-image: url('/assets/icons/new_icon/settings.webp');
                                         background-repeat: no-repeat;
-                                        background-size: 30px 30px;
+                                        background-size: 22px 22px;
                                         background-position: left 0;
                                     }
                                 }
@@ -202,28 +218,41 @@
 
                             &:last-child {
 
-                                background-color: #5b8469;
 
-                                .orange {
-                                    @include font-title($size: 28px);
+                                background-color: #2e3852;
+
+                                .grey {
+                                    @include font-title($size: 32px, $weight: 800);
+                                    margin-left: 45px;
+                                    //color: rgb(175, 175, 175);
                                     color: $color-accent;
+
+                                    text-shadow: 1px 2px 1px black;
                                 }
 
                                 ul {
-                                    p {
+                                    background-color: #434f71;
+                                    box-shadow: inset 0.5px 1px 1.5px 2px rgb(33, 33, 33);
 
-                                        @include font-text($size: 22px, $weight: 800);
-                                        color: black;
+                                    p {
+                                        display: flex;
+                                        max-width: 100%;
+                                        flex-direction: column;
+                                        text-align: left;
+
+                                        @include font-text($size: 20px, $weight: 800);
+                                        color: rgb(24, 24, 24);
                                     }
 
                                     li {
-                                        @include font-text($size: 15px, $weight: 600);
-                                        color: $color-text-secondary;
-                                        text-shadow: 0 0 6px black;
-                                        min-height: 30px;
+                                        @include font-text($size: 13px, $weight: 600);
+                                        //color: rgb(29, 29, 29);
+                                        color: $color-text-tertiary;
+                                        min-height: 22px;
+                                        line-height: 22px;
                                         background-image: url('/assets/icons/new_icon/settings.webp');
                                         background-repeat: no-repeat;
-                                        background-size: 30px 30px;
+                                        background-size: 22px 22px;
                                         background-position: left 0;
                                     }
                                 }
@@ -231,17 +260,17 @@
 
                             ul {
                                 margin: 0;
-                                padding: 0;
+                                padding: 10px;
 
                                 p {
                                     margin-bottom: 30px;
                                 }
 
                                 li {
-                                    margin: 20px 0 20px 30px;
+                                    margin: 20px 0 20px 10px;
 
                                     list-style: none;
-                                    padding-left: 45px;
+                                    padding-left: 35px;
                                 }
                             }
                         }
@@ -249,7 +278,8 @@
 
                     .choix__text {
                         display: inline-block;
-                        @include font-text($size: 32px, $weight: 800);
+                        text-align: center;
+                        @include font-text($size: 24px, $weight: 800);
                         color: $color-text-primary;
                         text-shadow: 0 0 6px black;
                     }
@@ -274,9 +304,15 @@
                         display: inline-block;
                         max-width: 70%;
                         text-align: left;
-                        @include font-text($size: 45px, $weight: 600);
+                        @include font-text($size: 40px, $weight: 600);
                         color: $color-accent-secondary;
                         text-shadow: 0 0 6px rgb(0, 0, 0);
+
+                        .Hostinger {
+                            @include font-text($size: 50px, $weight: 800);
+                            color: $color-text-primary;
+                            text-shadow: 0 0 6px rgb(0, 0, 0);
+                        }
                     }
 
                     .underline {
@@ -555,37 +591,45 @@
 
 
                         .maintenance__content {
-                            width: 80%;
-                            border: 1px solid $color-text-primary;
-                            border-radius: 8px;
-                            padding: 15px;
+                            width: 85%;
+                            padding: 8px;
                             background-color: $background-section-secondary;
 
                             &:first-child {
 
-                                background-color: #73779c;
 
-                                .orange {
+                                background-color: #2f4855;
+
+                                .grey {
                                     @include font-title($size: 22px);
+                                    margin-left: 25px;
                                     color: $color-accent;
+                                    text-shadow: 1px 2px 1px black;
                                 }
 
                                 ul {
-                                    p {
 
-                                        @include font-text($size: 18px, $weight: 800);
-                                        color: black;
+                                    background-color: #436271;
+                                    box-shadow: inset 1px 2px 2px 1px rgb(50, 50, 50);
+
+                                    p {
+                                        display: flex;
+                                        max-width: 100%;
+                                        flex-direction: column;
+                                        text-align: left;
+                                        @include font-text($size: 15px, $weight: 800);
+                                        color: rgb(29, 29, 29);
+                                        margin: 0 0 20px 0;
                                     }
 
                                     li {
                                         @include font-text($size: 13px, $weight: 600);
-
-                                        color: $color-text-secondary;
-                                        text-shadow: 0 0 6px black;
-                                        min-height: 30px;
+                                        color: $color-text-tertiary;
+                                        min-height: 25px;
+                                        line-height: 15px;
                                         background-image: url('/assets/icons/new_icon/settings.webp');
                                         background-repeat: no-repeat;
-                                        background-size: 25px 25px;
+                                        background-size: 15px 15px;
                                         background-position: left 0;
                                     }
                                 }
@@ -593,28 +637,38 @@
 
                             &:last-child {
 
-                                background-color: #5b8469;
+                                background-color: #2e3852;
 
-                                .orange {
+                                .grey {
                                     @include font-title($size: 22px);
+                                    margin-left: 25px;
                                     color: $color-accent;
+                                    text-shadow: 1px 2px 1px black;
                                 }
 
                                 ul {
-                                    p {
+                                    background-color: #434f71;
+                                    box-shadow: inset 1px 2px 2px 1px rgb(50, 50, 50);
 
-                                        @include font-text($size: 18px, $weight: 800);
-                                        color: black;
+
+                                    p {
+                                        display: flex;
+                                        max-width: 100%;
+                                        flex-direction: column;
+                                        text-align: left;
+                                        @include font-text($size: 15px, $weight: 800);
+                                        color: rgb(29, 29, 29);
+                                        margin: 0 0 20px 0;
                                     }
 
                                     li {
                                         @include font-text($size: 13px, $weight: 600);
-                                        color: $color-text-secondary;
-                                        text-shadow: 0 0 6px black;
-                                        min-height: 30px;
+                                        color: $color-text-tertiary;
+                                        min-height: 25px;
+                                        line-height: 15px;
                                         background-image: url('/assets/icons/new_icon/settings.webp');
                                         background-repeat: no-repeat;
-                                        background-size: 25px 25px;
+                                        background-size: 15px 15px;
                                         background-position: left 0;
                                     }
                                 }
@@ -622,7 +676,7 @@
 
                             ul {
                                 margin: 0;
-                                padding: 0;
+                                padding: 8px;
 
                                 p {
                                     margin-bottom: 30px;
@@ -631,7 +685,7 @@
                                 li {
                                     margin: 10px 0;
                                     list-style: none;
-                                    padding-left: 45px;
+                                    padding-left: 20px;
                                 }
                             }
                         }
@@ -639,7 +693,8 @@
 
                     .choix__text {
                         display: inline-block;
-                        @include font-text($size: 24px, $weight: 800);
+                        text-align: center;
+                        @include font-text($size: 20px, $weight: 800);
                         color: $color-text-primary;
                         text-shadow: 0 0 6px black;
                     }
@@ -647,12 +702,14 @@
                     .hebergement__text {
                         display: inline-block;
                         max-width: 100%;
+
+                        margin: 8px;
                         text-align: left;
-                        @include font-text($size: 18px);
+                        @include font-text($size: 15px);
                         color: $color-text-primary;
 
                         .bold {
-                            @include font-text($size: 22px, $weight: 600);
+                            @include font-text($size: 18px, $weight: 600);
                             color: $color-title;
                         }
                     }
@@ -661,16 +718,22 @@
                         display: inline-block;
                         max-width: 100%;
                         text-align: left;
-                        @include font-text($size: 30px, $weight: 600);
+                        margin: 8px;
+                        @include font-text($size: 22px, $weight: 600);
                         color: $color-accent-secondary;
                         text-shadow: 0 0 6px rgb(0, 0, 0);
+
+                        .Hostinger {
+                            @include font-text($size: 30px, $weight: 800);
+                            color: $color-text-primary;
+                            margin-right: 10px;
+                            text-shadow: 0 0 6px rgb(0, 0, 0);
+                        }
                     }
 
                     .underline {
-                        text-decoration: underline;
                         color: $color-title;
-                        margin: 0 6px;
-                        @include font-text($size: 20px, $weight: 600);
+                        @include font-text($size: 18px, $weight: 600);
                     }
                 }
 

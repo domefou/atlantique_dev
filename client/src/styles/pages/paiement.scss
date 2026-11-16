@@ -18,6 +18,7 @@
             flex-direction: column;
             flex-wrap: wrap;
             max-width: 90%;
+            width: 80%;
             margin-top: 30px;
             padding: 0 50px;
 
@@ -87,6 +88,13 @@
                         @include font-text($size: 32px, $weight: 800);
                         color: $color-accent-tertiary;
 
+                    }
+
+                    .CTA_cancel {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        max-width: 100%;
                     }
 
                     .link_paiement {
@@ -281,6 +289,13 @@
                         @include font-text($size: 28px, $weight: 800);
                         color: $color-accent-tertiary;
 
+                    }
+
+                    .CTA_cancel {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        max-width: 100%;
                     }
 
 
