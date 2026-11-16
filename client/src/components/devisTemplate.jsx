@@ -1,6 +1,6 @@
 import "../styles/components/devisTemplate.scss";
 
-import logoBlack from "/assets/logo/new_logo_black.png";
+import logoBlack from "/assets/logo/newLogoBlack_bis.webp";
 
 export default function DevisTemplate({ emailClient, architecture, database, wordpress, maintenance, options, total }) {
 
