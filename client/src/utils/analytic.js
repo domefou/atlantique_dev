@@ -2,7 +2,7 @@ export function loadAnalytics() {
     if (window.gtag) return;
 
     const script = document.createElement("script");
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-915Q11WL1V";
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-F4VP9HPQM4";
     script.async = true;
 
     document.head.appendChild(script);
@@ -14,7 +14,7 @@ export function loadAnalytics() {
     };
 
     window.gtag("js", new Date());
-    window.gtag("config", "G-915Q11WL1V");
+    window.gtag("config", "G-F4VP9HPQM4");
 }
 
 /*
@@ -31,3 +31,4 @@ prépare dataLayer pour envoyer des événements
 
 👉 C’est la méthode standard pour installer Google Analytics sur un site sans framework.
 */
+
