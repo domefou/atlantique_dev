@@ -2,7 +2,7 @@ export function loadAnalytics() {
     if (window.gtag) return;
 
     const script = document.createElement("script");
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-F4VP9HPQM4";
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-JE2RQVXB5Z";
     script.async = true;
 
     document.head.appendChild(script);
@@ -14,7 +14,7 @@ export function loadAnalytics() {
     };
 
     window.gtag("js", new Date());
-    window.gtag("config", "G-F4VP9HPQM4");
+    window.gtag("config", "G-JE2RQVXB5Z");
 }
 
 /*
